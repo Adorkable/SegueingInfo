@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Simple way to pass data between segueing View Controllers."
 
   s.description  = <<-DESC
-A simple way to pass data between segueing View Controllers within a UIStoryboard.
+**SegueingInfo** provides a simple interface, category, and class for passing data between segueing *UIViewController*s in iOS *UIStoryboard*s using the `sender` parameter of the `performSegueWithIdentifier:sender:` selector.
                    DESC
 
   s.homepage     = "https://github.com/yoiang/SegueingInfo"

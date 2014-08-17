@@ -17,6 +17,7 @@
 		3C7A0C3419A14CC20001BE79 /* libSegueingInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7A0BF619A14BE70001BE79 /* libSegueingInfo.a */; };
 		3C7A0C3719A14CE40001BE79 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3619A14CE40001BE79 /* SecondViewController.m */; };
 		3C7A0C3A19A15C590001BE79 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3919A15C590001BE79 /* LICENSE.md */; };
+		3C7A0C3C19A163F50001BE79 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3B19A163F50001BE79 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		3C7A0C3619A14CE40001BE79 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SegueingInfo.podspec; sourceTree = "<group>"; };
 		3C7A0C3919A15C590001BE79 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		3C7A0C3B19A163F50001BE79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		3C7A0BED19A14BE70001BE79 = {
 			isa = PBXGroup;
 			children = (
+				3C7A0C3B19A163F50001BE79 /* README.md */,
 				3C7A0C3919A15C590001BE79 /* LICENSE.md */,
 				3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */,
 				3C7A0BF819A14BE70001BE79 /* SegueingInfo */,
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7A0C3C19A163F50001BE79 /* README.md in Sources */,
 				3C7A0C3A19A15C590001BE79 /* LICENSE.md in Sources */,
 				3C7A0BFC19A14BE70001BE79 /* SegueingInfo.m in Sources */,
 			);

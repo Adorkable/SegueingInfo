@@ -1,5 +1,5 @@
 language: objective-c
-xcode_project: SegueingInfoExample.xcodeproj
+xcode_project: SegueingInfo.xcodeproj
 xcode_scheme: SegueingInfoExample
 xcode_sdk: iphonesimulator
-script: xctool -project SegueingInfoExample.xcodeproj -scheme SegueingInfoExample -sdk iphonesimulator build
+script: xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoExample -sdk iphonesimulator build

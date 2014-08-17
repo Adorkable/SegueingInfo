@@ -16,6 +16,7 @@
 		3C7A0C2119A14CAF0001BE79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7A0C2019A14CAF0001BE79 /* Images.xcassets */; };
 		3C7A0C3419A14CC20001BE79 /* libSegueingInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7A0BF619A14BE70001BE79 /* libSegueingInfo.a */; };
 		3C7A0C3719A14CE40001BE79 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3619A14CE40001BE79 /* SecondViewController.m */; };
+		3C7A0C3A19A15C590001BE79 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3919A15C590001BE79 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		3C7A0C2019A14CAF0001BE79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C7A0C3519A14CE40001BE79 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		3C7A0C3619A14CE40001BE79 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SegueingInfo.podspec; sourceTree = "<group>"; };
+		3C7A0C3919A15C590001BE79 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 		3C7A0BED19A14BE70001BE79 = {
 			isa = PBXGroup;
 			children = (
+				3C7A0C3919A15C590001BE79 /* LICENSE.md */,
+				3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */,
 				3C7A0BF819A14BE70001BE79 /* SegueingInfo */,
 				3C7A0C0219A14BE70001BE79 /* SegueingInfoTests */,
 				3C7A0C1219A14CAF0001BE79 /* SegueingInfoExample */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7A0C3A19A15C590001BE79 /* LICENSE.md in Sources */,
 				3C7A0BFC19A14BE70001BE79 /* SegueingInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +477,7 @@
 				3C7A0C0919A14BE70001BE79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C7A0C0A19A14BE70001BE79 /* Build configuration list for PBXNativeTarget "SegueingInfoTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				3C7A0C0C19A14BE70001BE79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C7A0C2E19A14CAF0001BE79 /* Build configuration list for PBXNativeTarget "SegueingInfoExample" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +495,7 @@
 				3C7A0C3019A14CAF0001BE79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -18,6 +18,13 @@
 		3C7A0C3719A14CE40001BE79 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3619A14CE40001BE79 /* SecondViewController.m */; };
 		3C7A0C3A19A15C590001BE79 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3919A15C590001BE79 /* LICENSE.md */; };
 		3C7A0C3C19A163F50001BE79 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3B19A163F50001BE79 /* README.md */; };
+		3CC2AE5C1A85426000D8FB27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C1819A14CAF0001BE79 /* AppDelegate.m */; };
+		3CC2AE5D1A85440C00D8FB27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C1B19A14CAF0001BE79 /* ViewController.m */; };
+		3CC2AE5F1A85441700D8FB27 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3619A14CE40001BE79 /* SecondViewController.m */; };
+		3CC2AE601A8546B500D8FB27 /* SegueingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */; };
+		3CC2AE611A8546FB00D8FB27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C1519A14CAF0001BE79 /* main.m */; };
+		3CC2AE631A8547AE00D8FB27 /* InfoOSX.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2AE621A8547AE00D8FB27 /* InfoOSX.plist */; };
+		3CC2AE681A85481100D8FB27 /* MainOSX.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2AE661A85481100D8FB27 /* MainOSX.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +60,9 @@
 		3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SegueingInfo.podspec; sourceTree = "<group>"; };
 		3C7A0C3919A15C590001BE79 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		3C7A0C3B19A163F50001BE79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3CC2AE391A853F1500D8FB27 /* SegueingInfoExampleOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueingInfoExampleOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CC2AE621A8547AE00D8FB27 /* InfoOSX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoOSX.plist; sourceTree = "<group>"; };
+		3CC2AE671A85481100D8FB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainOSX.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CC2AE361A853F1500D8FB27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +117,7 @@
 				3C7A0BF619A14BE70001BE79 /* libSegueingInfo.a */,
 				3C7A0C0119A14BE70001BE79 /* SegueingInfoTests.xctest */,
 				3C7A0C1119A14CAF0001BE79 /* SegueingInfoExample.app */,
+				3CC2AE391A853F1500D8FB27 /* SegueingInfoExampleOSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +155,7 @@
 				3C7A0C1A19A14CAF0001BE79 /* ViewController.h */,
 				3C7A0C1B19A14CAF0001BE79 /* ViewController.m */,
 				3C7A0C1D19A14CAF0001BE79 /* Main.storyboard */,
+				3CC2AE661A85481100D8FB27 /* MainOSX.storyboard */,
 				3C7A0C2019A14CAF0001BE79 /* Images.xcassets */,
 				3C7A0C1319A14CAF0001BE79 /* Supporting Files */,
 				3C7A0C3519A14CE40001BE79 /* SecondViewController.h */,
@@ -149,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				3C7A0C1419A14CAF0001BE79 /* Info.plist */,
+				3CC2AE621A8547AE00D8FB27 /* InfoOSX.plist */,
 				3C7A0C1519A14CAF0001BE79 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -208,6 +228,23 @@
 			productReference = 3C7A0C1119A14CAF0001BE79 /* SegueingInfoExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3CC2AE381A853F1500D8FB27 /* SegueingInfoExampleOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CC2AE5A1A853F1600D8FB27 /* Build configuration list for PBXNativeTarget "SegueingInfoExampleOSX" */;
+			buildPhases = (
+				3CC2AE351A853F1500D8FB27 /* Sources */,
+				3CC2AE361A853F1500D8FB27 /* Frameworks */,
+				3CC2AE371A853F1500D8FB27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SegueingInfoExampleOSX;
+			productName = SegueingInfoExampleOSX;
+			productReference = 3CC2AE391A853F1500D8FB27 /* SegueingInfoExampleOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,6 +262,9 @@
 					};
 					3C7A0C1019A14CAF0001BE79 = {
 						CreatedOnToolsVersion = 6.0;
+					};
+					3CC2AE381A853F1500D8FB27 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -244,6 +284,7 @@
 				3C7A0BF519A14BE70001BE79 /* SegueingInfo */,
 				3C7A0C0019A14BE70001BE79 /* SegueingInfoTests */,
 				3C7A0C1019A14CAF0001BE79 /* SegueingInfoExample */,
+				3CC2AE381A853F1500D8FB27 /* SegueingInfoExampleOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +303,15 @@
 			files = (
 				3C7A0C1F19A14CAF0001BE79 /* Main.storyboard in Resources */,
 				3C7A0C2119A14CAF0001BE79 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CC2AE371A853F1500D8FB27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC2AE681A85481100D8FB27 /* MainOSX.storyboard in Resources */,
+				3CC2AE631A8547AE00D8FB27 /* InfoOSX.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +346,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3CC2AE351A853F1500D8FB27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC2AE611A8546FB00D8FB27 /* main.m in Sources */,
+				3CC2AE601A8546B500D8FB27 /* SegueingInfo.m in Sources */,
+				3CC2AE5F1A85441700D8FB27 /* SecondViewController.m in Sources */,
+				3CC2AE5D1A85440C00D8FB27 /* ViewController.m in Sources */,
+				3CC2AE5C1A85426000D8FB27 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -305,6 +367,14 @@
 				3C7A0C1E19A14CAF0001BE79 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CC2AE661A85481100D8FB27 /* MainOSX.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CC2AE671A85481100D8FB27 /* Base */,
+			);
+			name = MainOSX.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,6 +532,39 @@
 			};
 			name = Release;
 		};
+		3CC2AE561A853F1600D8FB27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SegueingInfoExample/InfoOSX.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3CC2AE571A853F1600D8FB27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = SegueingInfoExample/InfoOSX.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -500,6 +603,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3CC2AE5A1A853F1600D8FB27 /* Build configuration list for PBXNativeTarget "SegueingInfoExampleOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CC2AE561A853F1600D8FB27 /* Debug */,
+				3CC2AE571A853F1600D8FB27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

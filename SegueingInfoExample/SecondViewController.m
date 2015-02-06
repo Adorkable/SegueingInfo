@@ -16,16 +16,29 @@
 
 @implementation SecondViewController
 
-- (void)destinationPrepareForSegue:(UIStoryboardSegue *)segue info:(id)info
+- (void)destinationPrepareForSegue:(StoryboardSegueClass *)segue info:(id)info
 {
     self.iWasToldText = [NSString stringWithFormat:@"%@", info];
 }
 
+#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     self.iWasTold.text = self.iWasToldText;
 }
+
+#else
+
+- (void)viewWillAppear
+{
+    [super viewWillAppear];
+
+    [self.iWasTold setStringValue:self.iWasToldText];
+}
+
+#endif
 
 @end

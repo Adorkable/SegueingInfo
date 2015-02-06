@@ -6,12 +6,18 @@
 //  Copyright (c) 2014 Adorkable. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "SegueingInfo.h"
 
+#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
 @interface SecondViewController : UIViewController<SegueingInfoViewController>
+#else
+@interface SecondViewController : NSViewController<SegueingInfoViewController>
+#endif
 
-@property (weak, nonatomic) IBOutlet UILabel *iWasTold;
+#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+@property (strong, nonatomic) IBOutlet UILabel *iWasTold;
+#else
+@property (strong, nonatomic) IBOutlet NSTextField *iWasTold;
+#endif
 
 @end

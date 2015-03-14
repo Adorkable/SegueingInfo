@@ -11,7 +11,7 @@
 
 @interface ViewController : SegueingInfoViewController
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 @property (weak, nonatomic) IBOutlet UITextField *tell;
 #else
 @property (weak, nonatomic) IBOutlet NSTextField *tell;

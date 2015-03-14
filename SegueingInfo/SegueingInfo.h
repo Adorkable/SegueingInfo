@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 
 #import <UIKit/UIKit.h>
 
@@ -24,7 +24,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 #endif
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 @interface UIViewController (SegueingInfo)
 #else
 @interface NSViewController (SegueingInfo)
@@ -41,7 +41,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 @end
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 @interface SegueingInfoViewController : UIViewController
 #else
 @interface SegueingInfoViewController : NSViewController

@@ -8,13 +8,13 @@
 
 #import "SegueingInfo.h"
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 @interface SecondViewController : UIViewController<SegueingInfoViewController>
 #else
 @interface SecondViewController : NSViewController<SegueingInfoViewController>
 #endif
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 @property (strong, nonatomic) IBOutlet UILabel *iWasTold;
 #else
 @property (strong, nonatomic) IBOutlet NSTextField *iWasTold;

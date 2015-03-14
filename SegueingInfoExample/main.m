@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #else
 #import <Cocoa/Cocoa.h>
@@ -16,7 +16,7 @@
 
 #import "AppDelegate.h"
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

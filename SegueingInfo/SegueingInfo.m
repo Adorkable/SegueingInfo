@@ -8,7 +8,7 @@
 
 #import "SegueingInfo.h"
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 @implementation UIViewController (SegueingInfo)
 #else
 @implementation NSViewController (SegueingInfo)
@@ -16,13 +16,13 @@
 
 + (void)prepareDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
 {
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
     if ( [segue.destinationViewController conformsToProtocol:@protocol(SegueingInfoViewController) ] )
 #else
     if ( [segue.destinationController conformsToProtocol:@protocol(SegueingInfoViewController) ] )
 #endif
     {
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
         id<SegueingInfoViewController> segueingViewController = segue.destinationViewController;
 #else
         id<SegueingInfoViewController> segueingViewController = segue.destinationController;

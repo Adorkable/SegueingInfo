@@ -8,7 +8,7 @@
 
 #import "SegueingInfo.h"
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 
 typedef UIResponder ResponderClass;
 typedef UIWindow WindowClass;

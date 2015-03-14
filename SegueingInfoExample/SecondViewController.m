@@ -21,7 +21,7 @@
     self.iWasToldText = [NSString stringWithFormat:@"%@", info];
 }
 
-#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 
 - (void)viewWillAppear:(BOOL)animated
 {

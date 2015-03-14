@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d9r-9j-0pj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d9r-9j-0pj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="QyW-vf-gdF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RIe-a7-mxU">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-eI-gZ1">
-                                <rect key="frame" x="192" y="110" width="183.5" height="100"/>
+                                <rect key="frame" x="68" y="234" width="183.5" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell next view controller:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beV-L7-XEn">
                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="20.5"/>
@@ -61,13 +61,10 @@
                             <constraint firstAttribute="centerX" secondItem="XfA-eI-gZ1" secondAttribute="centerX" id="s1d-VW-w9P"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
-                        <size key="portraitSize" width="320" height="568"/>
-                        <size key="landscapeSize" width="568" height="320"/>
-                    </simulatedScreenMetrics>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tell" destination="mUo-0C-Pk4" id="1hr-7z-2tP"/>
-                        <segue destination="DaC-mr-A4W" kind="modal" identifier="Next" id="Epb-kT-Dyi"/>
+                        <segue destination="DaC-mr-A4W" kind="presentation" identifier="Next" id="Epb-kT-Dyi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPA-Im-dic" sceneMemberID="firstResponder"/>
@@ -83,11 +80,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xhR-5L-4sr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cQa-ng-z89">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="127-fu-scA">
-                                <rect key="frame" x="244" y="140" width="79" height="41"/>
+                                <rect key="frame" x="120" y="264" width="79" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I was told:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-RI-qst">
                                         <rect key="frame" x="0.0" y="0.0" width="79" height="20.5"/>

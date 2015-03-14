@@ -16,7 +16,11 @@
             
 - (IBAction)tellNextViewController:(id)sender
 {
+#if defined __IPHONE_OS_VERSION_MAX_ALLOWED
     [self performSegueWithIdentifier:@"Next" sender:self.tell.text];
+#else
+    [self performSegueWithIdentifier:@"Next" sender:[self.tell stringValue] ];
+#endif
 }
 
 @end

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SegueingInfo"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Simple way to pass data between segueing View Controllers."
 
   s.description  = <<-DESC
@@ -14,7 +14,8 @@ Pod::Spec.new do |s|
   
   s.author             = { "Ian G" => "yo.ian.g@gmail.com" }
 
-  s.platform     = :ios, "6.0"
+  s.ios.deployment_target = "6.0"
+  s.osx.deployment_target = "10.10"
 
   s.source       = { :git => "https://github.com/yoiang/SegueingInfo.git", :tag => "1.0.0" }
 

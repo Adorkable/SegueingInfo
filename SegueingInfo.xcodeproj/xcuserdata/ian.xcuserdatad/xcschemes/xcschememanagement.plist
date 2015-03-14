@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>SegueingInfoExampleOSX.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>SegueingInfoTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>3C7A0C2519A14CAF0001BE79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3CC2AE381A853F1500D8FB27</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3CC2AE4D1A853F1600D8FB27</key>
 		<dict>
 			<key>primary</key>
 			<true/>

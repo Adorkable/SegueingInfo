@@ -1,5 +1,5 @@
 language: objective-c
-xcode_workspace: SegueingInfo.xcodeproj
+xcode_project: SegueingInfo.xcodeproj
 xcode_sdk: iphonesimulator
 xcode_scheme:
  - SegueingInfo

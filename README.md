@@ -4,7 +4,7 @@ SegueingInfo
 [![Pod Version](http://img.shields.io/cocoapods/v/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
 [![Pod License](http://img.shields.io/cocoapods/l/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
-[![Build Status](http://img.shields.io/travis/yoiang/SegueingInfo.svg?branch=master&style=flat)](https://travis-ci.org/yoiang/SegueingInfo)
+[![Build Status](http://img.shields.io/travis/adorkable/SegueingInfo.svg?branch=master&style=flat)](https://travis-ci.org/adorkable/SegueingInfo)
 
 
 **SegueingInfo** provides a simple interface, category, and class for passing data between segueing *UIViewController*s in iOS *UIStoryboard*s using the `sender` parameter of the `performSegueWithIdentifier:sender:` selector.
@@ -17,7 +17,7 @@ Installation
   pod "SegueingInfo"
 ```
 
-Alternatively you can clone the **[github repo](https://github.com/Codecademy/SegueingInfo)**.
+Alternatively you can clone the **[github repo](https://github.com/adorkable/SegueingInfo)**.
 
 Setup
 ---
@@ -45,4 +45,4 @@ Finally you have two options:
 
 Contributing
 ---
-If you have any ideas, suggestions or bugs to report please [create an issue](https://github.com/Codecademy/SegueingInfo/issues/new) labeled *feature* or *bug* (check to see if the issue exists first please!). Or suggest a pull request!
+If you have any ideas, suggestions or bugs to report please [create an issue](https://github.com/adorkable/SegueingInfo/issues/new) labeled *feature* or *bug* (check to see if the issue exists first please!). Or suggest a pull request!

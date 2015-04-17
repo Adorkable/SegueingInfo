@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 **SegueingInfo** provides a simple interface, category, and class for passing data between segueing *UIViewController*s in iOS *UIStoryboard*s using the `sender` parameter of the `performSegueWithIdentifier:sender:` selector.
                    DESC
 
-  s.homepage     = "https://github.com/adorkable/SegueingInfo"
+  s.homepage     = "https://github.com/Adorkable/SegueingInfo"
 
   s.license      = "MIT"
   
@@ -17,12 +17,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "6.0"
   s.osx.deployment_target = "10.10"
 
-  s.source       = { :git => "https://github.com/adorkable/SegueingInfo.git", :tag => "1.1.0" }
+  s.source       = { :git => "https://github.com/Adorkable/SegueingInfo.git", :tag => "1.1.0" }
 
   s.source_files  = "SegueingInfo/SegueingInfo.h", "SegueingInfo/SegueingInfo.m"
 
   s.requires_arc = true
 
-  s.documentation_url = "https://github.com/yoiang/ColorMapView/blob/master/README.md"
+  s.documentation_url = "https://github.com/Adorkable/ColorMapView/blob/master/README.md"
 
 end

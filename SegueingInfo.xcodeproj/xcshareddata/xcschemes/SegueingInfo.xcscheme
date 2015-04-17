@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C7A0BF519A14BE70001BE79"
-               BuildableName = "libSegueingInfo.a"
-               BlueprintName = "SegueingInfo"
+               BuildableName = "libSegueingInfoiOS.a"
+               BlueprintName = "SegueingInfoiOS"
                ReferencedContainer = "container:SegueingInfo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C7A0BF519A14BE70001BE79"
-            BuildableName = "libSegueingInfo.a"
-            BlueprintName = "SegueingInfo"
+            BuildableName = "libSegueingInfoiOS.a"
+            BlueprintName = "SegueingInfoiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C7A0BF519A14BE70001BE79"
-            BuildableName = "libSegueingInfo.a"
-            BlueprintName = "SegueingInfo"
+            BuildableName = "libSegueingInfoiOS.a"
+            BlueprintName = "SegueingInfoiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

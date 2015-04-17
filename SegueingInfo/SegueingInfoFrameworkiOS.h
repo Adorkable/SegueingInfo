@@ -14,6 +14,6 @@ FOUNDATION_EXPORT double SegueingInfoFrameworkiOSVersionNumber;
 //! Project version string for SegueingInfoFrameworkiOS.
 FOUNDATION_EXPORT const unsigned char SegueingInfoFrameworkiOSVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <SegueingInfoFrameworkiOS/PublicHeader.h>
+#import "SegueingInfo.h"
 
 

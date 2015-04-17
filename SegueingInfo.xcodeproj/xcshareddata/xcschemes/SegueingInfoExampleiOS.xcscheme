@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,22 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C7A0C1019A14CAF0001BE79"
-               BuildableName = "SegueingInfoExample.app"
-               BlueprintName = "SegueingInfoExample"
-               ReferencedContainer = "container:SegueingInfo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C7A0C2519A14CAF0001BE79"
-               BuildableName = "SegueingInfoExampleTests.xctest"
-               BlueprintName = "SegueingInfoExampleTests"
+               BuildableName = "SegueingInfoExampleiOS.app"
+               BlueprintName = "SegueingInfoExampleiOS"
                ReferencedContainer = "container:SegueingInfo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C7A0C2519A14CAF0001BE79"
-               BuildableName = "SegueingInfoExampleTests.xctest"
-               BlueprintName = "SegueingInfoExampleTests"
-               ReferencedContainer = "container:SegueingInfo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C7A0C1019A14CAF0001BE79"
-            BuildableName = "SegueingInfoExample.app"
-            BlueprintName = "SegueingInfoExample"
+            BuildableName = "SegueingInfoExampleiOS.app"
+            BlueprintName = "SegueingInfoExampleiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C7A0C1019A14CAF0001BE79"
-            BuildableName = "SegueingInfoExample.app"
-            BlueprintName = "SegueingInfoExample"
+            BuildableName = "SegueingInfoExampleiOS.app"
+            BlueprintName = "SegueingInfoExampleiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C7A0C1019A14CAF0001BE79"
-            BuildableName = "SegueingInfoExample.app"
-            BlueprintName = "SegueingInfoExample"
+            BuildableName = "SegueingInfoExampleiOS.app"
+            BlueprintName = "SegueingInfoExampleiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

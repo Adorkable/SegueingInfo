@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C3CF8331AB38E2700EEE0D6 /* SegueingInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7A0BF919A14BE70001BE79 /* SegueingInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C3CF8341AB38E2700EEE0D6 /* SegueingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */; };
+		3C46DF391AE0C50B00D3A789 /* SegueingInfoFrameworkiOS-Force-Umbrella.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46DF381AE0C50B00D3A789 /* SegueingInfoFrameworkiOS-Force-Umbrella.swift */; };
+		3C46DF3B1AE0C53600D3A789 /* SegueingInfoiOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3CF81A1AB38E0D00EEE0D6 /* SegueingInfoiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C7A0BFA19A14BE70001BE79 /* SegueingInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C7A0BF919A14BE70001BE79 /* SegueingInfo.h */; };
 		3C7A0BFC19A14BE70001BE79 /* SegueingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */; };
 		3C7A0C1619A14CAF0001BE79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C1519A14CAF0001BE79 /* main.m */; };
@@ -39,6 +41,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3C46DF3A1AE0C52C00D3A789 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C46DF3B1AE0C53600D3A789 /* SegueingInfoiOS.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C7A0BF419A14BE70001BE79 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		3C3CF81A1AB38E0D00EEE0D6 /* SegueingInfoiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegueingInfoiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C46DF381AE0C50B00D3A789 /* SegueingInfoFrameworkiOS-Force-Umbrella.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueingInfoFrameworkiOS-Force-Umbrella.swift"; sourceTree = "<group>"; };
 		3C7A0BF619A14BE70001BE79 /* libSegueingInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegueingInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7A0BF919A14BE70001BE79 /* SegueingInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegueingInfo.h; sourceTree = "<group>"; };
 		3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegueingInfo.m; sourceTree = "<group>"; };
@@ -152,6 +165,7 @@
 				3CE1613B1AB41BE9009E57C1 /* SegueingInfoFrameworkiOS.h */,
 				3C7A0BF919A14BE70001BE79 /* SegueingInfo.h */,
 				3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */,
+				3C46DF381AE0C50B00D3A789 /* SegueingInfoFrameworkiOS-Force-Umbrella.swift */,
 			);
 			path = SegueingInfo;
 			sourceTree = "<group>";
@@ -276,6 +290,7 @@
 				3CE161021AB41785009E57C1 /* Sources */,
 				3CE161031AB41785009E57C1 /* Frameworks */,
 				3CE161041AB41785009E57C1 /* Resources */,
+				3C46DF3A1AE0C52C00D3A789 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -378,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3CF8341AB38E2700EEE0D6 /* SegueingInfo.m in Sources */,
+				3C46DF391AE0C50B00D3A789 /* SegueingInfoFrameworkiOS-Force-Umbrella.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,12 +474,14 @@
 		3C3CF82E1AB38E0E00EEE0D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -474,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = SegueingInfoiOS;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -483,6 +502,7 @@
 		3C3CF82F1AB38E0E00EEE0D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -490,6 +510,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/SegueingInfo/InfoFrameworkiOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;

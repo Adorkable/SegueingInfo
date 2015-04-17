@@ -107,7 +107,7 @@
 		3C7A0BF619A14BE70001BE79 /* libSegueingInfoiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegueingInfoiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7A0BF919A14BE70001BE79 /* SegueingInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegueingInfo.h; sourceTree = "<group>"; };
 		3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegueingInfo.m; sourceTree = "<group>"; };
-		3C7A0C1119A14CAF0001BE79 /* SegueingInfoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SegueingInfoExample.app; path = SegueingInfoExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C7A0C1119A14CAF0001BE79 /* SegueingInfoExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueingInfoExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7A0C1419A14CAF0001BE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7A0C1519A14CAF0001BE79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C7A0C1719A14CAF0001BE79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				3C7A0BF619A14BE70001BE79 /* libSegueingInfoiOS.a */,
-				3C7A0C1119A14CAF0001BE79 /* SegueingInfoExample.app */,
+				3C7A0C1119A14CAF0001BE79 /* SegueingInfoExampleiOS.app */,
 				3CC2AE391A853F1500D8FB27 /* SegueingInfoExampleOSX.app */,
 				3C3CF81A1AB38E0D00EEE0D6 /* SegueingInfoiOS.framework */,
 				3CE161061AB41785009E57C1 /* SegueingInfoExampleFrameworkiOS.app */,
@@ -404,7 +404,7 @@
 			);
 			name = SegueingInfoExampleiOS;
 			productName = SegueingInfoExample;
-			productReference = 3C7A0C1119A14CAF0001BE79 /* SegueingInfoExample.app */;
+			productReference = 3C7A0C1119A14CAF0001BE79 /* SegueingInfoExampleiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3CC2AE381A853F1500D8FB27 /* SegueingInfoExampleOSX */ = {

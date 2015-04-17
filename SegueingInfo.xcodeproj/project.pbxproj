@@ -19,7 +19,6 @@
 		3C46DFA21AE0C96800D3A789 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C1819A14CAF0001BE79 /* AppDelegate.m */; };
 		3C46DFA31AE0C96A00D3A789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C1B19A14CAF0001BE79 /* ViewController.m */; };
 		3C46DFA41AE0C96D00D3A789 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0C3619A14CE40001BE79 /* SecondViewController.m */; };
-		3C46DFA51AE0C97100D3A789 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE161351AB41B61009E57C1 /* LaunchScreen.xib */; };
 		3C46DFA61AE0C97800D3A789 /* MainOSX.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2AE661A85481100D8FB27 /* MainOSX.storyboard */; };
 		3C46DFA71AE0C97E00D3A789 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7A0C2019A14CAF0001BE79 /* Images.xcassets */; };
 		3C46DFA81AE0C97F00D3A789 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7A0C2019A14CAF0001BE79 /* Images.xcassets */; };
@@ -525,7 +524,6 @@
 			files = (
 				3C46DFA71AE0C97E00D3A789 /* Images.xcassets in Resources */,
 				3C46DFA61AE0C97800D3A789 /* MainOSX.storyboard in Resources */,
-				3C46DFA51AE0C97100D3A789 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

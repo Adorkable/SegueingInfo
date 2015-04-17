@@ -23,4 +23,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.documentation_url = "https://github.com/yoiang/ColorMapView/blob/master/README.md"
+
 end

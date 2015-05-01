@@ -34,7 +34,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 @end
 
-@protocol SegueingInfoViewController <NSObject>
+@protocol SegueingInfoProtocol <NSObject>
 
 @required
 - (void)destinationPrepareForSegue:(StoryboardSegueClass *)segue info:(id)info;

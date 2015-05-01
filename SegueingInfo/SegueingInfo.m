@@ -17,15 +17,15 @@
 + (void)prepareDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
 {
 #if TARGET_OS_IPHONE
-    if ( [segue.destinationViewController conformsToProtocol:@protocol(SegueingInfoViewController) ] )
+    if ( [segue.destinationViewController conformsToProtocol:@protocol(SegueingInfoProtocol) ] )
 #else
-    if ( [segue.destinationController conformsToProtocol:@protocol(SegueingInfoViewController) ] )
+    if ( [segue.destinationController conformsToProtocol:@protocol(SegueingInfoProtocol) ] )
 #endif
     {
 #if TARGET_OS_IPHONE
-        id<SegueingInfoViewController> segueingViewController = segue.destinationViewController;
+        id<SegueingInfoProtocol> segueingViewController = segue.destinationViewController;
 #else
-        id<SegueingInfoViewController> segueingViewController = segue.destinationController;
+        id<SegueingInfoProtocol> segueingViewController = segue.destinationController;
 #endif
         if ( [segueingViewController respondsToSelector:@selector(destinationPrepareForSegue:info:) ] )
         {

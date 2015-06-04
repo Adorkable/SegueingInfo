@@ -9,9 +9,9 @@
 #import "SegueingInfo.h"
 
 #if TARGET_OS_IPHONE
-@interface SecondViewController : UIViewController<SegueingInfoViewController>
+@interface SecondViewController : UIViewController<SegueingInfoProtocol>
 #else
-@interface SecondViewController : NSViewController<SegueingInfoViewController>
+@interface SecondViewController : NSViewController<SegueingInfoProtocol>
 #endif
 
 #if TARGET_OS_IPHONE

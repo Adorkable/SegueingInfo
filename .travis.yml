@@ -3,11 +3,11 @@ language: objective-c
 xcode_project: SegueingInfo.xcodeproj
 xcode_scheme:
 - SegueingInfo
-- SegueingInfoExampleiOS
+#- SegueingInfoExampleiOS
 - SegueingInfoOSX
-- SegueingInfoExampleOSX
+#- SegueingInfoExampleOSX
 - SegueingInfoFrameworkiOS
-- SegueingInfoExampleFrameworkiOS
+#- SegueingInfoExampleFrameworkiOS
 - SegueingInfoFrameworkOSX
-- SegueingInfoExampleFrameworkOSX
+#- SegueingInfoExampleFrameworkOSX
 - "Podspec Lint"

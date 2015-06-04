@@ -1,7 +1,7 @@
 language: objective-c
 
 xcode_project: SegueingInfo.xcodeproj
-xcode_sdk: iphonesimulator8.3
+xcode_sdk: iphonesimulator
 xcode_scheme:
 - SegueingInfo
 - SegueingInfoExampleiOS

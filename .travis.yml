@@ -1,10 +1,14 @@
 language: objective-c
-script:
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfo -sdk iphonesimulator build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoExampleiOS -sdk iphonesimulator build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoOSX build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoExampleOSX build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoFrameworkiOS -sdk iphonesimulator build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoExampleFrameworkiOS -sdk iphonesimulator build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoFrameworkOSX build test
- - xctool -project SegueingInfo.xcodeproj -scheme SegueingInfoExampleFrameworkOSX build test
+
+xcode_project: SegueingInfo
+xcode_sdk: iphonesimulator8.3
+xcode_scheme:
+- SegueingInfo
+- SegueingInfoExampleiOS
+- SegueingInfoOSX
+- SegueingInfoExampleOSX
+- SegueingInfoFrameworkiOS
+- SegueingInfoExampleFrameworkiOS
+- SegueingInfoFrameworkOSX
+- SegueingInfoExampleFrameworkOSX
+- "Podspec Lint"

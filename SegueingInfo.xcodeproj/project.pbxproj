@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3C245C951B2080FF006E673B /* Podspec Lint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3C245C961B208100006E673B /* Build configuration list for PBXAggregateTarget "Podspec Lint" */;
+			buildPhases = (
+				3C245C991B20810B006E673B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Podspec Lint";
+			productName = "Podspec Lint";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3C3CF8331AB38E2700EEE0D6 /* SegueingInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7A0BF919A14BE70001BE79 /* SegueingInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C3CF8341AB38E2700EEE0D6 /* SegueingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A0BFB19A14BE70001BE79 /* SegueingInfo.m */; };
@@ -94,6 +108,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C245C921B208033006E673B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3C245C931B208033006E673B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		3C245C941B208033006E673B /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		3C3CF81A1AB38E0D00EEE0D6 /* SegueingInfoiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegueingInfoiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C46DF381AE0C50B00D3A789 /* SegueingInfoFramework-Force-Umbrella.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueingInfoFramework-Force-Umbrella.swift"; sourceTree = "<group>"; };
 		3C46DF431AE0C79400D3A789 /* libSegueingInfoOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegueingInfoOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,15 +215,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C7A0BED19A14BE70001BE79 = {
+		3C245C911B208010006E673B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				3C7A0C3B19A163F50001BE79 /* README.md */,
 				3C7A0C3919A15C590001BE79 /* LICENSE.md */,
 				3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */,
+				3C245C921B208033006E673B /* .gitignore */,
+				3C245C931B208033006E673B /* .travis.yml */,
+				3C245C941B208033006E673B /* Gemfile */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C7A0BED19A14BE70001BE79 = {
+			isa = PBXGroup;
+			children = (
 				3C7A0BF819A14BE70001BE79 /* SegueingInfo */,
 				3C7A0C1219A14CAF0001BE79 /* SegueingInfoExample */,
 				3C7A0BF719A14BE70001BE79 /* Products */,
+				3C245C911B208010006E673B /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -450,6 +478,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Adorkable;
 				TargetAttributes = {
+					3C245C951B2080FF006E673B = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					3C3CF8191AB38E0D00EEE0D6 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -497,6 +528,7 @@
 				3CE161051AB41785009E57C1 /* SegueingInfoExampleFrameworkiOS */,
 				3C46DF601AE0C89100D3A789 /* SegueingInfoFrameworkOSX */,
 				3C46DF7D1AE0C8B400D3A789 /* SegueingInfoExampleFrameworkOSX */,
+				3C245C951B2080FF006E673B /* Podspec Lint */,
 			);
 		};
 /* End PBXProject section */
@@ -557,6 +589,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C245C991B20810B006E673B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pod spec lint";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C3CF8151AB38E0D00EEE0D6 /* Sources */ = {
@@ -667,6 +715,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3C245C971B208100006E673B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3C245C981B208100006E673B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3C3CF82E1AB38E0E00EEE0D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1031,6 +1093,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C245C961B208100006E673B /* Build configuration list for PBXAggregateTarget "Podspec Lint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C245C971B208100006E673B /* Debug */,
+				3C245C981B208100006E673B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3C3CF82D1AB38E0E00EEE0D6 /* Build configuration list for PBXNativeTarget "SegueingInfoFrameworkiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -23,4 +23,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.subspec 'Swizzling' do |swizzling|
+    swizzling.dependency 'RSSwizzle'
+    swizzling.prefix_header_contents = "#define USE_SWIZZLING 1"
+  end
+
 end

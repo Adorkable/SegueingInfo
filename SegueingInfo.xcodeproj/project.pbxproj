@@ -1090,6 +1090,7 @@
 				3C245C981B208100006E673B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C3CF82D1AB38E0E00EEE0D6 /* Build configuration list for PBXNativeTarget "SegueingInfoFrameworkiOS" */ = {
 			isa = XCConfigurationList;

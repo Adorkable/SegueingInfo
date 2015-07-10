@@ -8,10 +8,49 @@
 
 #import "SegueingInfo.h"
 
+#if USE_SWIZZLING
+#import <RSSwizzle/RSSwizzle.h>
+#endif
+
 #if TARGET_OS_IPHONE
 @implementation UIViewController (SegueingInfo)
 #else
 @implementation NSViewController (SegueingInfo)
+#endif
+
+#if USE_SWIZZLING
++ (void)load
+{
+    static const void *key = &key;
+    
+    SEL selector = @selector(prepareForSegue:sender:);
+    
+#if TARGET_OS_IPHONE
+    RSSwizzleInstanceMethod(self,
+                            selector,
+                            RSSWReturnType(void),
+                            RSSWArguments(UIStoryboardSegue *segue, id sender),
+                            RSSWReplacement(
+    {
+        RSSWCallOriginal(segue, sender);
+        
+        [UIViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
+
+    }), RSSwizzleModeOncePerClass, key);
+#else
+    RSSwizzleInstanceMethod(self,
+                            selector,
+                            RSSWReturnType(void),
+                            RSSWArguments(NSStoryboardSegue *segue, id sender),
+                            RSSWReplacement(
+    {
+        RSSWCallOriginal(segue, sender);
+        
+        [NSViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
+        
+    }), RSSwizzleModeOncePerClass, key);
+#endif
+}
 #endif
 
 - (void)prepareAsDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
@@ -43,16 +82,20 @@
 
 @end
 
+#if USE_SWIZZLING != 1
+
 @implementation SegueingInfoViewController
 
 - (void)prepareForSegue:(StoryboardSegueClass *)segue sender:(id)sender
 {
     [super prepareForSegue:segue sender:sender];
     
-    [SegueingInfoViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
+    [UIViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
 }
 
 @end
+
+#endif
 
 #if TARGET_OS_IPHONE
 @implementation UINavigationController (SegueingInfo)

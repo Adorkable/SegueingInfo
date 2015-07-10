@@ -28,6 +28,14 @@ Once installed you'll first want to import the main header file:
 #import <SegueingInfo/SeguingInfo.h>
 ```
 
+Once set up, to pass information simply call the appropriate `performSegueWithIdentifier:sender:`, `popViewController`, etc. call and pass your information into the sender parameter:
+	
+``` Objective-C
+...
+[self performSegueWithIdentifier:"Next" sender:someObjectWithInfo];
+...
+```
+	
 Next your destination *UIViewController* subclass must conform to the protocol `SegueingInfoViewController`, it will receive the information you pass, typically before `viewDidLoad`, through the selector
 
 ``` Objective-C
@@ -37,18 +45,23 @@ Next your destination *UIViewController* subclass must conform to the protocol `
 }
 ```
 
-Finally you have two options:
+Finally you have three options:
 
-1. You can change your source *UIViewController*'s parent class to `SegueingInfoViewController` to have it automatically forward your information on segue.
-2. The `*UIViewController* **(SegueingInfo)**` category provides the class selector `prepareDestinationViewControllerForSegue:withInfo:` for forwarding your info on to the destination *UIViewController* manually. Typically you'll be calling this from your *UIViewController*'s `prepareForSegue:sender:`.
+1. By far the simplest solution, if you are comfortable with selector swizzling happening in your app include the `Swizzling` subspec in your `Podfile`:
 
-To pass information simply call the appropriate `performSegueWithIdentifier:sender:` call and pass your information into the sender parameter:
+	``` ruby
+	  pod "SegueingInfo/Swizzling"
+	```
+2. You can change your source *UIViewController*'s parent class to `SegueingInfoViewController` to have it automatically forward your information on segue.
 
-``` Objective-C
-...
-[self performSegueWithIdentifier:"Next" sender:someObjectWithInfo];
-...
-```
+3. The *UIViewController* **(SegueingInfo)** category provides the class selector `prepareDestinationViewControllerForSegue:withInfo:` for forwarding your info on to the destination *UIViewController* manually. Typically you'll be calling this from your *UIViewController*'s `prepareForSegue:sender:`:
+	
+	``` Objective-C
+	- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
+	{
+        [UIViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
+    }
+    ```
 
 Contributing
 ---

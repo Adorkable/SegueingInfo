@@ -40,7 +40,11 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 @end
 
+/**
+ *  Protocol for receiving passed information
+ */
 @protocol SegueingInfoProtocol <NSObject>
+// TODO: Protocol name should include "Destination" somewhere probs
 
 @required
 /**
@@ -53,7 +57,10 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 @end
 
+#if USE_SWIZZLING != 1
+
 #if TARGET_OS_IPHONE
+
 /**
  *  View Controller class that provides automatic passing from source View Controller to destination View Controller
  */
@@ -63,6 +70,8 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 #endif
 
 @end
+
+#endif
 
 #if TARGET_OS_IPHONE
 @interface UINavigationController (SegueingInfo)

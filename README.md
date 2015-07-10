@@ -7,7 +7,7 @@ SegueingInfo
 [![Build Status](http://img.shields.io/travis/Adorkable/SegueingInfo.svg?branch=master&style=flat)](https://travis-ci.org/Adorkable/SegueingInfo)
 
 
-**SegueingInfo** provides a simple interface, category, and class for passing data between segueing *UIViewController*s in iOS *UIStoryboard*s using the `sender` parameter of the `performSegueWithIdentifier:sender:` selector.
+**SegueingInfo** provides a simple interface, category, and class for passing data between segueing *UIViewController*s in iOS and OSX *UIStoryboard*s using the `sender` parameter of the `performSegueWithIdentifier:sender:` selector. You should use this to enforce a formal, declarative interface that encourages modularity and weak dependancy.
 
 Installation
 ---
@@ -42,6 +42,13 @@ Finally you have two options:
 1. You can change your source *UIViewController*'s parent class to `SegueingInfoViewController` to have it automatically forward your information on segue.
 2. The `*UIViewController* **(SegueingInfo)**` category provides the class selector `prepareDestinationViewControllerForSegue:withInfo:` for forwarding your info on to the destination *UIViewController* manually. Typically you'll be calling this from your *UIViewController*'s `prepareForSegue:sender:`.
 
+To pass information simply call the appropriate `performSegueWithIdentifier:sender:` call and pass your information into the sender parameter:
+
+``` Objective-C
+...
+[self performSegueWithIdentifier:"Next" sender:someObjectWithInfo];
+...
+```
 
 Contributing
 ---

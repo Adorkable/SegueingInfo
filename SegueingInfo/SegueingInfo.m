@@ -57,31 +57,30 @@
 #if TARGET_OS_IPHONE
 @implementation UINavigationController (SegueingInfo)
 
-- (void)popViewControllerAnimated:(BOOL)animated info:(id)info
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated info:(id)info
 {
     if (self.viewControllers.count > 1 && [self.viewControllers[self.viewControllers.count - 2] isKindOfClass:[UIViewController class] ] )
     {
         UIViewController *topViewController = (UIViewController *)self.viewControllers[self.viewControllers.count - 2];
         [topViewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
     }
-    [self popViewControllerAnimated:animated];
-    
+    return [self popViewControllerAnimated:animated];
 }
 
-- (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated info:(id)info
+- (NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated info:(id)info
 {
     [viewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
-    [self popToViewController:viewController animated:animated];
+    return [self popToViewController:viewController animated:animated];
 }
 
-- (void)popToRootViewControllerAnimated:(BOOL)animated info:(id)info
+- (NSArray *)popToRootViewControllerAnimated:(BOOL)animated info:(id)info
 {
     if (self.viewControllers.count > 0 && [self.viewControllers.firstObject isKindOfClass:[UIViewController class] ] )
     {
         UIViewController *rootViewController = (UIViewController *)self.viewControllers.firstObject;
         [rootViewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
     }
-    [self popToRootViewControllerAnimated:animated];
+    return [self popToRootViewControllerAnimated:animated];
 }
 
 @end

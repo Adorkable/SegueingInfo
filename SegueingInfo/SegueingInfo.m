@@ -14,23 +14,30 @@
 @implementation NSViewController (SegueingInfo)
 #endif
 
+- (void)prepareAsDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
+{
+    if ( [self conformsToProtocol:@protocol(SegueingInfoProtocol) ] )
+    {
+        id<SegueingInfoProtocol> selfAsProtocol = (id<SegueingInfoProtocol>)self;
+        if ( [selfAsProtocol respondsToSelector:@selector(destinationPrepareForSegue:info:) ] )
+        {
+            [selfAsProtocol destinationPrepareForSegue:segue info:info];
+        }
+    }
+}
+
 + (void)prepareDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
 {
+    id destination = nil;
 #if TARGET_OS_IPHONE
-    if ( [segue.destinationViewController conformsToProtocol:@protocol(SegueingInfoProtocol) ] )
+    destination = segue.destinationViewController;
 #else
-    if ( [segue.destinationController conformsToProtocol:@protocol(SegueingInfoProtocol) ] )
+    destination = segue.destinationController;
 #endif
+    
+    if ( [destination respondsToSelector:@selector(prepareAsDestinationViewControllerForSegue:withInfo:) ] )
     {
-#if TARGET_OS_IPHONE
-        id<SegueingInfoProtocol> segueingViewController = segue.destinationViewController;
-#else
-        id<SegueingInfoProtocol> segueingViewController = segue.destinationController;
-#endif
-        if ( [segueingViewController respondsToSelector:@selector(destinationPrepareForSegue:info:) ] )
-        {
-            [segueingViewController destinationPrepareForSegue:segue info:info];
-        }
+        [destination prepareAsDestinationViewControllerForSegue:segue withInfo:info];
     }
 }
 
@@ -46,3 +53,20 @@
 }
 
 @end
+
+#if TARGET_OS_IPHONE
+@implementation UINavigationController (SegueingInfo)
+
+- (void)popViewControllerAnimated:(BOOL)animated info:(id)info
+{
+    if (self.viewControllers.count > 1 && [self.viewControllers[self.viewControllers.count - 2] isKindOfClass:[UIViewController class] ] )
+    {
+        UIViewController *topViewController = (UIViewController *)self.viewControllers[self.viewControllers.count - 2];
+        [topViewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
+    }
+    [self popViewControllerAnimated:animated];
+    
+}
+
+@end
+#endif

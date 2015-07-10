@@ -48,3 +48,11 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 #endif
 
 @end
+
+#if TARGET_OS_IPHONE
+@interface UINavigationController (SegueingInfo)
+
+- (void)popViewControllerAnimated:(BOOL)animated info:(id)info;
+
+@end
+#endif

@@ -30,6 +30,11 @@
     self.iWasTold.text = self.iWasToldText;
 }
 
+- (IBAction)pop:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES info:@"Tell my lover that I popped!"];
+}
+
 #else
 
 - (void)viewWillAppear

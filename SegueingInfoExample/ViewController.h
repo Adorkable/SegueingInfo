@@ -10,6 +10,9 @@
 
 
 @interface ViewController : SegueingInfoViewController
+#if TARGET_OS_IPHONE
+<SegueingInfoProtocol>
+#endif
 
 #if TARGET_OS_IPHONE
 @property (weak, nonatomic) IBOutlet UITextField *tell;

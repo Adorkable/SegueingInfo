@@ -10,10 +10,31 @@
 
 @interface ViewController ()
 
+#if TARGET_OS_IPHONE
+@property (strong, readwrite) NSString *iWasToldText;
+#endif
+
 @end
 
 @implementation ViewController
-            
+
+#if TARGET_OS_IPHONE
+- (void)destinationPrepareForSegue:(UIStoryboardSegue *)segue info:(id)info
+{
+    self.iWasToldText = [NSString stringWithFormat:@"%@", info];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (self.iWasToldText != nil)
+    {
+        self.tell.text = self.iWasToldText;
+    }
+}
+#endif
+
 - (IBAction)tellNextViewController:(id)sender
 {
 #if TARGET_OS_IPHONE

@@ -90,7 +90,7 @@
 {
     [super prepareForSegue:segue sender:sender];
     
-    [UIViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
+    [ViewControllerClass prepareDestinationViewControllerForSegue:segue withInfo:sender];
 }
 
 @end

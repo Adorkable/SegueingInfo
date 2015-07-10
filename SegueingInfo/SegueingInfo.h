@@ -19,7 +19,7 @@ typedef UIStoryboardSegue StoryboardSegueClass;
 
 #import <Cocoa/Cocoa.h>
 
-typedef NSViewController ViewControllerSuperclass;
+typedef NSViewController ViewControllerClass;
 typedef NSStoryboardSegue StoryboardSegueClass;
 
 #endif
@@ -61,15 +61,10 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 #if !USE_SWIZZLING
 
-#if TARGET_OS_IPHONE
-
 /**
  *  View Controller class that provides automatic passing from source View Controller to destination View Controller
  */
-@interface SegueingInfoViewController : UIViewController
-#else
-@interface SegueingInfoViewController : NSViewController
-#endif
+@interface SegueingInfoViewController : ViewControllerClass
 
 @end
 

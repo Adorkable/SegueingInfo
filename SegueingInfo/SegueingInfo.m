@@ -82,7 +82,7 @@
 
 @end
 
-#if USE_SWIZZLING != 1
+#if !USE_SWIZZLING
 
 @implementation SegueingInfoViewController
 

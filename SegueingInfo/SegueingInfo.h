@@ -30,6 +30,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 @interface NSViewController (SegueingInfo)
 #endif
 
+#if !USE_SWIZZLING
 /**
  *  Utility selector that handles passing information to a waiting and able destination View Controller. Usually called from prepareForSegue:sender:
  *
@@ -37,6 +38,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
  *  @param info  The information being passed to the destination of the segue
  */
 + (void)prepareDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info;
+#endif
 
 @end
 
@@ -57,7 +59,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 @end
 
-#if USE_SWIZZLING != 1
+#if !USE_SWIZZLING
 
 #if TARGET_OS_IPHONE
 

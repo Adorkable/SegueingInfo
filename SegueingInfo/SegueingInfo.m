@@ -68,5 +68,21 @@
     
 }
 
+- (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated info:(id)info
+{
+    [viewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
+    [self popToViewController:viewController animated:animated];
+}
+
+- (void)popToRootViewControllerAnimated:(BOOL)animated info:(id)info
+{
+    if (self.viewControllers.count > 0 && [self.viewControllers.firstObject isKindOfClass:[UIViewController class] ] )
+    {
+        UIViewController *rootViewController = (UIViewController *)self.viewControllers.firstObject;
+        [rootViewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
+    }
+    [self popToRootViewControllerAnimated:animated];
+}
+
 @end
 #endif

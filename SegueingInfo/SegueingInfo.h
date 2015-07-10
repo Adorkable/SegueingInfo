@@ -53,6 +53,8 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 @interface UINavigationController (SegueingInfo)
 
 - (void)popViewControllerAnimated:(BOOL)animated info:(id)info;
+- (void)popToViewController:(UIViewController *)viewController animated:(BOOL)animated info:(id)info;
+- (void)popToRootViewControllerAnimated:(BOOL)animated info:(id)info;
 
 @end
 #endif

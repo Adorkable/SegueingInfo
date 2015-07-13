@@ -1,5 +1,6 @@
 language: objective-c
-
+install:
+- gem install cocoapods
 xcode_project: SegueingInfo.xcodeproj
 xcode_scheme:
 - SegueingInfo

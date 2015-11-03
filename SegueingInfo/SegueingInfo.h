@@ -24,6 +24,7 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 
 #endif
 
+/// Target specific type aliasing
 #if TARGET_OS_IPHONE
 @interface UIViewController (SegueingInfo)
 #else
@@ -71,6 +72,9 @@ typedef NSStoryboardSegue StoryboardSegueClass;
 #endif
 
 #if TARGET_OS_IPHONE
+/**
+ *  Extension selectors for UINavigationController
+ */
 @interface UINavigationController (SegueingInfo)
 
 /**

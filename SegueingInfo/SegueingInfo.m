@@ -18,6 +18,10 @@
 @implementation NSViewController (SegueingInfo)
 #endif
 
+/**
+ *  If swizzling is enabled set up swizzling
+ *
+ */
 #if USE_SWIZZLING
 + (void)load
 {
@@ -53,6 +57,12 @@
 }
 #endif
 
+/**
+ *  Prepare compatible self as destination
+ *
+ *  @param segue Segue
+ *  @param info  Info to pass
+ */
 - (void)prepareAsDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
 {
     if ( [self conformsToProtocol:@protocol(SegueingInfoProtocol) ] )
@@ -65,6 +75,12 @@
     }
 }
 
+/**
+ *  Prepare compatible segue destination
+ *
+ *  @param segue Segue
+ *  @param info  Info to pass
+ */
 + (void)prepareDestinationViewControllerForSegue:(StoryboardSegueClass *)segue withInfo:(id)info
 {
     id destination = nil;
@@ -86,6 +102,12 @@
 
 @implementation SegueingInfoViewController
 
+/**
+ *  Inhereted forwarding to SegueingInfo handlers for subclasses of SegueingInfoViewController
+ *
+ *  @param segue  Segue
+ *  @param sender Sender
+ */
 - (void)prepareForSegue:(StoryboardSegueClass *)segue sender:(id)sender
 {
     [super prepareForSegue:segue sender:sender];
@@ -100,6 +122,13 @@
 #if TARGET_OS_IPHONE
 @implementation UINavigationController (SegueingInfo)
 
+/**
+ *  Pop View Controller
+ *
+ *  @param animated Animated or not
+ *  @param info     Info to pass
+ *
+ */
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated info:(id)info
 {
     if (self.viewControllers.count > 1 && [self.viewControllers[self.viewControllers.count - 2] isKindOfClass:[UIViewController class] ] )
@@ -110,12 +139,27 @@
     return [self popViewControllerAnimated:animated];
 }
 
+/**
+ *  Pop to specified View Controller
+ *
+ *  @param viewController View Controller to pop to
+ *  @param animated       Animated or not
+ *  @param info           Info to pass
+ *
+ */
 - (NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated info:(id)info
 {
     [viewController prepareAsDestinationViewControllerForSegue:nil withInfo:info];
     return [self popToViewController:viewController animated:animated];
 }
 
+/**
+ *  Pop to Root View Controller
+ *
+ *  @param animated Animated or not
+ *  @param info     Info to pass
+ *
+ */
 - (NSArray *)popToRootViewControllerAnimated:(BOOL)animated info:(id)info
 {
     if (self.viewControllers.count > 0 && [self.viewControllers.firstObject isKindOfClass:[UIViewController class] ] )

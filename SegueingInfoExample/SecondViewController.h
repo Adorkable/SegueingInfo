@@ -8,12 +8,16 @@
 
 #import "SegueingInfo.h"
 
+/// Example View Controller
 #if TARGET_OS_IPHONE
 @interface SecondViewController : UIViewController<SegueingInfoProtocol>
 #else
 @interface SecondViewController : NSViewController<SegueingInfoProtocol>
 #endif
 
+/**
+ *  Display info passed to this view controller
+ */
 #if TARGET_OS_IPHONE
 @property (strong, nonatomic) IBOutlet UILabel *iWasTold;
 #else

@@ -14,10 +14,16 @@ typedef UIResponder ResponderClass;
 typedef UIWindow WindowClass;
 typedef UIApplication ApplicationClass;
 
+/**
+ *  App delegate
+ */
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 #else
 
+/**
+ *  App delegate
+ */
 @interface AppDelegate : NSResponder <NSApplicationDelegate>
 
 typedef NSResponder ResponderClass;
@@ -26,6 +32,9 @@ typedef NSApplication ApplicationClass;
 
 #endif
 
+/**
+ *  Main Window
+ */
 @property (strong, nonatomic) WindowClass *window;
 
 @end

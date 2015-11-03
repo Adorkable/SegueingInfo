@@ -11,6 +11,9 @@
 @interface ViewController ()
 
 #if TARGET_OS_IPHONE
+/**
+ *  Value received from PrepereForSegue
+ */
 @property (strong, readwrite) NSString *iWasToldText;
 #endif
 
@@ -19,11 +22,22 @@
 @implementation ViewController
 
 #if TARGET_OS_IPHONE
+/**
+ *  SegueingInfo Protocol selector for receiving information
+ *
+ *  @param segue Segue
+ *  @param info  Info to pass
+ */
 - (void)destinationPrepareForSegue:(UIStoryboardSegue *)segue info:(id)info
 {
     self.iWasToldText = [NSString stringWithFormat:@"%@", info];
 }
 
+/**
+ *  Set view to passed info 
+ *
+ *  @param animated Animated or not
+ */
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -35,6 +49,11 @@
 }
 #endif
 
+/**
+ *  Common action to segue to next Controller while passing Tell value
+ *
+ *  @param sender Sender
+ */
 - (IBAction)tellNextViewController:(id)sender
 {
 #if TARGET_OS_IPHONE

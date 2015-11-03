@@ -13,7 +13,17 @@
 @end
 
 @implementation AppDelegate
-            
+
+/**
+ *
+ *  Typical App Delegate implementation
+ *
+ *
+ *  @param application   application
+ *  @param launchOptions launch options
+ *
+ *  @return When launched successfully
+ */
 - (BOOL)application:(ApplicationClass *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;

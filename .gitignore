@@ -29,3 +29,6 @@ Pods/
 #
 Carthage/Checkouts
 Carthage/Build
+
+# Appledocs
+docs

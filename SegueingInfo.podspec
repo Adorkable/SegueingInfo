@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SegueingInfo"
-  s.version      = "1.5.2"
+  s.version      = "1.5.3"
   s.summary      = "Simple way to pass data between segueing View Controllers."
 
   s.description  = <<-DESC

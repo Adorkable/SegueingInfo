@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C06B1031C1082AF00505F68"
-               BuildableName = "SegueingInfo.framework"
-               BlueprintName = "SegueingInfoOSX"
+               BlueprintIdentifier = "3C06B1341C10A2EE00505F68"
+               BuildableName = "SegueingInfoiOSExamples.app"
+               BlueprintName = "SegueingInfoiOSExamples"
                ReferencedContainer = "container:SegueingInfo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C06B10C1C1082AF00505F68"
-               BuildableName = "SegueingInfoOSXTests.xctest"
-               BlueprintName = "SegueingInfoOSXTests"
+               BlueprintIdentifier = "3C06B1501C10B3DE00505F68"
+               BuildableName = "SegueingInfoiOSUITests.xctest"
+               BlueprintName = "SegueingInfoiOSUITests"
                ReferencedContainer = "container:SegueingInfo.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C06B1031C1082AF00505F68"
-            BuildableName = "SegueingInfo.framework"
-            BlueprintName = "SegueingInfoOSX"
+            BlueprintIdentifier = "3C06B1341C10A2EE00505F68"
+            BuildableName = "SegueingInfoiOSExamples.app"
+            BlueprintName = "SegueingInfoiOSExamples"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,15 +62,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C06B1031C1082AF00505F68"
-            BuildableName = "SegueingInfo.framework"
-            BlueprintName = "SegueingInfoOSX"
+            BlueprintIdentifier = "3C06B1341C10A2EE00505F68"
+            BuildableName = "SegueingInfoiOSExamples.app"
+            BlueprintName = "SegueingInfoiOSExamples"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,15 +81,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C06B1031C1082AF00505F68"
-            BuildableName = "SegueingInfo.framework"
-            BlueprintName = "SegueingInfoOSX"
+            BlueprintIdentifier = "3C06B1341C10A2EE00505F68"
+            BuildableName = "SegueingInfoiOSExamples.app"
+            BlueprintName = "SegueingInfoiOSExamples"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

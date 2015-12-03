@@ -7,13 +7,14 @@ SegueingInfo
 [![Build Status](http://img.shields.io/travis/Adorkable/SegueingInfo.svg?branch=master&style=flat)](https://travis-ci.org/Adorkable/SegueingInfo)
 
 
-**SegueingInfo** provides a simple interface, category, and class for passing data between segueing *UIViewController*s in iOS and OSX *UIStoryboard*s using the `sender` parameter of the `performSegueWithIdentifier:sender:` selector. You should use this to enforce a formal, declarative interface that encourages modularity and weak dependancy.
+**SegueingInfo** provides a few simple ways to passs data between segueing View Controller's in both iOS and OSX *UIStoryboard*s in a formal, declarative interface which enforcing modularity and weak dependancy between your View Controller implementations. 
+
+**SegueingInfo** requires minimal code to get up and running and using the `sender` parameter of your `performSegueWithIdentifier(identifier:, sender:)` function call (`performSegueWithIdentifier:sender:` selector in ObjC).
 
 Installation
 ---
 **SegueingInfo** is available through **[cocoapods](http://cocoapods.org)**, to install simple add the following line to your `PodFile`:
-
-``` ruby
+```Ruby
   pod "SegueingInfo"
 ```
 
@@ -22,44 +23,76 @@ Alternatively you can clone the **[github repo](https://github.com/Adorkable/Seg
 Setup
 ---
 
-Once installed you'll first want to import the main header file:
+Once installed you'll first want to import library:
 
-``` Objective-C
+Swift
+```Swift
+import SegueingInfo
+```
+
+ObjC
+```Objective-C
 #import <SegueingInfo/SeguingInfo.h>
 ```
 
-Once set up, to pass information simply call the appropriate `performSegueWithIdentifier:sender:`, `popViewController`, etc. call and pass your information into the sender parameter:
-	
+Once set up, to pass information simply call the appropriate `performSegueWithIdentifier`, `popViewController`, etc. call and pass your information into the sender parameter:
+
+Swift
+```swift
+...
+self.performSegueWithIdentifier("Next", sender: someObjectWithInfo)
+...
+```
+ObjC
 ``` Objective-C
 ...
 [self performSegueWithIdentifier:"Next" sender:someObjectWithInfo];
 ...
 ```
 	
-Next your destination *UIViewController* subclass must conform to the protocol `SegueingInfoViewController`, it will receive the information you pass, typically before `viewDidLoad`, through the selector
+Next your destination *UIViewController* subclass must conform to the protocol `SegueingInfoDestination`, it will receive the information you pass, through the selector
 
-``` Objective-C
+Swift
+```Swift
+func destinationPrepareForSegue(segue : UIStoryboardSegue?, info: AnyObject) {
+	...
+}
+```
+
+ObjC
+```Objective-C
 - (void)destinationPrepareForSegue:(UIStoryboardSegue *)segue info:(id)info
 {
 	...
 }
 ```
 
-Finally you have three options:
+Please note: there is no guarantee as to when your destination View Controller will receive the information relative to `viewDidLoad`. If you plan on using the passed information to populate your interface make sure you use it when `viewDidLoad` has been called and store it off when it hasn't yet.
 
-1. By far the simplest solution, if you are comfortable with selector swizzling happening in your app include the `Swizzling` subspec in your `Podfile`:
+**Note**: there are plans to provide a more guaranteed handling of this.
 
-	``` ruby
-	  pod "SegueingInfo/Swizzling"
-	```
-2. You can change your source *UIViewController*'s parent class to `SegueingInfoViewController` to have it automatically forward your information on segue.
+Finally you have two options:
 
-3. The *UIViewController* **(SegueingInfo)** category provides the class selector `prepareDestinationViewControllerForSegue:withInfo:` for forwarding your info on to the destination *UIViewController* manually. Typically you'll be calling this from your *UIViewController*'s `prepareForSegue:sender:`:
+1. You can change your source *UIViewController*'s parent class to `SegueingInfoViewController` to have it automatically forward your information on segue.
+
+2. The *UIViewController* **(SegueingInfo)** category provides the class selector `prepareDestinationViewControllerForSegue` for forwarding your info on to the destination *UIViewController* manually. Typically you'll be calling this from your *UIViewController*'s `prepareForSegue`:
 	
-	``` Objective-C
+    Swift
+    ```Swift
+    override func prepareForSegue(segue : UIStoryboardSegue, sender : AnyObject?) {
+    	super.prepareForSegue(segue, sender: sender)
+        
+        self.prepareDestinationViewControlleForSegue(segue, sender: sender)
+    }
+    ```
+    
+    ObjC
+	```Objective-C
 	- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 	{
-        [UIViewController prepareDestinationViewControllerForSegue:segue withInfo:sender];
+    	[super prepareForSegue:segue sender:sender];
+        
+        [self prepareDestinationViewControllerForSegue:segue withInfo:sender];
     }
     ```
 

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SegueingInfo"
-  s.version      = "1.5.3"
+  s.version      = "2.0.0"
   s.summary      = "Simple way to pass data between segueing View Controllers."
 
   s.description  = <<-DESC
@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   
   s.author             = { "Ian G" => "yo.ian.g@gmail.com" }
 
-  s.ios.deployment_target = "6.0"
-  s.osx.deployment_target = "10.10"
+  s.ios.deployment_target = "9.1"
+  s.osx.deployment_target = "10.11"
 
   s.source       = { :git => "https://github.com/Adorkable/SegueingInfo.git", :tag => s.version.to_s }
 
@@ -23,14 +23,7 @@ Pod::Spec.new do |s|
 
   s.default_subspec = 'Core'
   s.subspec 'Core' do |core|
-    core.source_files  = "SegueingInfo/SegueingInfo.h", "SegueingInfo/SegueingInfo.m"
-  end
-
-  s.subspec 'Swizzling' do |swizzling|
-    swizzling.dependency 'RSSwizzle'
-    swizzling.prefix_header_contents = "#define USE_SWIZZLING 1"
-
-    swizzling.dependency 'SegueingInfo/Core'
+    core.source_files  = "SegueingInfo/**/*.swift"
   end
 
 end

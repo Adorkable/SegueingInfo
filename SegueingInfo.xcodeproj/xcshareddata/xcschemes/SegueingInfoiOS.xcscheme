@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C06B1031C1082AF00505F68"
+               BlueprintIdentifier = "3C4C32931C0D573800FF039E"
                BuildableName = "SegueingInfo.framework"
-               BlueprintName = "SegueingInfoOSX"
+               BlueprintName = "SegueingInfoiOS"
                ReferencedContainer = "container:SegueingInfo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C06B10C1C1082AF00505F68"
-               BuildableName = "SegueingInfoOSXTests.xctest"
-               BlueprintName = "SegueingInfoOSXTests"
+               BlueprintIdentifier = "3C4C329C1C0D573800FF039E"
+               BuildableName = "SegueingInfoiOSTests.xctest"
+               BlueprintName = "SegueingInfoiOSTests"
+               ReferencedContainer = "container:SegueingInfo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3C06B1501C10B3DE00505F68"
+               BuildableName = "SegueingInfoiOSUITests.xctest"
+               BlueprintName = "SegueingInfoiOSUITests"
                ReferencedContainer = "container:SegueingInfo.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +53,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C06B1031C1082AF00505F68"
+            BlueprintIdentifier = "3C4C32931C0D573800FF039E"
             BuildableName = "SegueingInfo.framework"
-            BlueprintName = "SegueingInfoOSX"
+            BlueprintName = "SegueingInfoiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C06B1031C1082AF00505F68"
+            BlueprintIdentifier = "3C4C32931C0D573800FF039E"
             BuildableName = "SegueingInfo.framework"
-            BlueprintName = "SegueingInfoOSX"
+            BlueprintName = "SegueingInfoiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C06B1031C1082AF00505F68"
+            BlueprintIdentifier = "3C4C32931C0D573800FF039E"
             BuildableName = "SegueingInfo.framework"
-            BlueprintName = "SegueingInfoOSX"
+            BlueprintName = "SegueingInfoiOS"
             ReferencedContainer = "container:SegueingInfo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

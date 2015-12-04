@@ -3,12 +3,7 @@ install:
 - gem install cocoapods
 xcode_project: SegueingInfo.xcodeproj
 xcode_scheme:
-- SegueingInfo
-#- SegueingInfoExampleiOS
+- SegueingInfoiOS
 - SegueingInfoOSX
-#- SegueingInfoExampleOSX
-- SegueingInfoFrameworkiOS
-#- SegueingInfoExampleFrameworkiOS
-- SegueingInfoFrameworkOSX
-#- SegueingInfoExampleFrameworkOSX
-- "Podspec Lint"
+- SegueingInfoExamples
+#- "Podspec Lint"

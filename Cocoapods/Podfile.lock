@@ -1,0 +1,16 @@
+PODS:
+  - SegueingInfo (2.0.0):
+    - SegueingInfo/Core (= 2.0.0)
+  - SegueingInfo/Core (2.0.0)
+
+DEPENDENCIES:
+  - SegueingInfo (from `../`)
+
+EXTERNAL SOURCES:
+  SegueingInfo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SegueingInfo: 3cd6a3e2da247768c5936e248431d70fcb759fd9
+
+COCOAPODS: 0.39.0

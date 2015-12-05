@@ -1,0 +1,5 @@
+use_frameworks!
+
+target :SegueingInfoCocoapodsExamples do
+    pod 'SegueingInfo', :path => '../'
+end

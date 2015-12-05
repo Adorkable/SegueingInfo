@@ -33,6 +33,7 @@
 		3CE1A37F1C132EB1005B8601 /* SegueingInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */; };
 		3CE1A3811C132F6B005B8601 /* SegueingInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */; };
 		3CE1A3821C132F6B005B8601 /* SegueingInfo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CE1A3861C1330C1005B8601 /* SegueingInfo.framework.dSYM in Copy Framework dSYMs */ = {isa = PBXBuildFile; fileRef = 3CE1A3851C1330C1005B8601 /* SegueingInfo.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,17 @@
 				3CE1A3821C132F6B005B8601 /* SegueingInfo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CE1A3841C13308D005B8601 /* Copy Framework dSYMs */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				3CE1A3861C1330C1005B8601 /* SegueingInfo.framework.dSYM in Copy Framework dSYMs */,
+			);
+			name = "Copy Framework dSYMs";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -88,6 +100,8 @@
 		3CE1A3731C12B119005B8601 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = ../SegueingInfoTests/Utility.swift; sourceTree = "<group>"; };
 		3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SegueingInfo.framework; path = Carthage/Build/iOS/SegueingInfo.framework; sourceTree = "<group>"; };
 		3CE1A3801C132EBA005B8601 /* SegueingInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SegueingInfo.framework; path = Carthage/Build/Mac/SegueingInfo.framework; sourceTree = "<group>"; };
+		3CE1A3851C1330C1005B8601 /* SegueingInfo.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SegueingInfo.framework.dSYM; path = Carthage/Build/iOS/SegueingInfo.framework.dSYM; sourceTree = "<group>"; };
+		3CE1A3871C1330D7005B8601 /* SegueingInfo.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SegueingInfo.framework.dSYM; path = Carthage/Build/Mac/SegueingInfo.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +202,7 @@
 		3CE1A37C1C132EA4005B8601 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3CE1A3851C1330C1005B8601 /* SegueingInfo.framework.dSYM */,
 				3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */,
 			);
 			name = iOS;
@@ -196,6 +211,7 @@
 		3CE1A37D1C132EA7005B8601 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				3CE1A3871C1330D7005B8601 /* SegueingInfo.framework.dSYM */,
 				3CE1A3801C132EBA005B8601 /* SegueingInfo.framework */,
 			);
 			name = OSX;
@@ -221,6 +237,7 @@
 				3CE1A3041C12AC8C005B8601 /* Frameworks */,
 				3CE1A3051C12AC8C005B8601 /* Resources */,
 				3CE1A3831C132F6B005B8601 /* Embed Frameworks */,
+				3CE1A3841C13308D005B8601 /* Copy Framework dSYMs */,
 			);
 			buildRules = (
 			);

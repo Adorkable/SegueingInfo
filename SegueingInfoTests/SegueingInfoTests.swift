@@ -8,8 +8,6 @@
 
 import XCTest
 
-@testable import SegueingInfo
-
 class SegueingInfoTests: XCTestCase {
     
 }

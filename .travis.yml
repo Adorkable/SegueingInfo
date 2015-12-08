@@ -2,6 +2,7 @@ language: objective-c
 osx_image: xcode7.1
 
 before_install:
+- gem install xcpretty-travis-formatter
 - gem install cocoapods
 - brew install carthage
 - SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 6 (9.1) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
@@ -10,14 +11,14 @@ install:
 
 script:
 - open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
-- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator clean build
-#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
-- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator clean build
-#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
-- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoOSX' -sdk macosx clean build
+- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator clean build | xcpretty -f `xcpretty-travis-formatter`
+#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test | xcpretty -f `xcpretty-travis-formatter`
+- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator clean build | xcpretty -f `xcpretty-travis-formatter`
+#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test | xcpretty -f `xcpretty-travis-formatter`
+- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoOSX' -sdk macosx clean build | xcpretty -f `xcpretty-travis-formatter`
 
 - cd Cocoapods; pod update; cd ..
-- xcodebuild -workspace SegueingInfoCocoapodsExamples.xcworkspace -scheme 'SegueingInfoCocoapodsExamples' -sdk iphonesimulator clean build
+- xcodebuild -workspace SegueingInfoCocoapodsExamples.xcworkspace -scheme 'SegueingInfoCocoapodsExamples' -sdk iphonesimulator clean build | xcpretty -f `xcpretty-travis-formatter`
 
 - cd Carthage; carthage update; cd ..
-- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
+- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build | xcpretty -f `xcpretty-travis-formatter`

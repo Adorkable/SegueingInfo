@@ -44,6 +44,6 @@ notifications:
   email: false
   hipchat:
     on_success: change
-    on_failure: change
+    on_failure: always
     rooms:
       - 0874d85d15aa23d387bff48576c30c@2236505

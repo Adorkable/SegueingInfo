@@ -16,12 +16,19 @@ script:
 #- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
 - xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoOSX' -sdk macosx clean build
 
-- cd Cocoapods; pod update; cd ..
+- cd Cocoapods
+- pod update
 - xcodebuild -workspace SegueingInfoCocoapodsExamples.xcworkspace -scheme 'SegueingInfoCocoapodsExamples' -sdk iphonesimulator clean build
+- cd ..
 
-- cd Carthage; carthage update; cd ..
+- cd Carthage
+- carthage bootstrap
 - xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+- cd ..
 
 env:
   global:
+    - FRAMEWORK_NAME=SegueingInfo.framework
     secure: r8chZOBPfEkalkpmoGA/jxj2ANlo2LiGkEDMQNzzrUkH+wteGnez+vpVb2U+VsGhy3UEtfgk06U5hsCJrPSJbufTWWtMwYE2KsvkHzCyTh2p0HbLA9Wn8t7QsPZgJItXUr0fpX0M4Qe23rpmL7lthgHzN6HZ+avRyD9nGxMDM2Rf4kQ7SzlOgtFVesw6lbRvMBWvohrmOl8nZBujRWdk97oHQOdeVXL67i45Cx1/lL7HuXSrXcjlXWNt7/Entg7y6gCqk+6oftTfNWsCCGub1Y/fXOzoJ+69L6/iRT19cqcyJJ/r9PBQheAipTelqwB8SmnOwCqt12VOKcjJaOi8zEUncJPUDncT5evdpvJXHI6jr6Cp1TMGfgkHbjKr66HN1gaJ0GO4MmWoinrUeVNoynUFNYYaEDgbUZ4E9LA7BFOQ9ZcCkEieOXV3fM5vZ2C/0FLfjETIQQU8v3ByKqdWuuJozZG7e3pA/mCI2+c/LqflaYfrosHSssK06KJ+pRG8Dgd7CWSejos4DN1mByT45MuNVhHl/OM31uYLSaX/jfr0CwAqktS1JtnWyGYMitB7BdieZs3Xli75MeSmakB25kp85y6ZH1gmd6UjPjI9QKECEO6Z0vP9UBZIVW3+sxU/i3yguXJlX3/iFsP3wzi2orTYdMqgi/O5VCblpdV4FoY=

@@ -20,21 +20,31 @@ script:
 - cd ..
 
 - cd Carthage
-- carthage bootstrap
-- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
-- carthage build --no-skip-current
-- carthage archive $FRAMEWORK_NAME
+- carthage bootstrap --platform iOS --verbose
+#- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
+- carthage build --no-skip-current --platform iOS
+- carthage archive $FRAMEWORK_IOS_NAME
+- cd ..
+
+- cd Carthage
+- carthage bootstrap --platform Mac --verbose
+#- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
+- carthage build --no-skip-current --platform Mac
+- carthage archive $FRAMEWORK_OSX_NAME
 - cd ..
 
 env:
   global:
-  - FRAMEWORK_NAME=SegueingInfo
+  - FRAMEWORK_IOS_NAME=SegueingInfo.iOS
+  - FRAMEWORK_OSX_NAME=SegueingInfo.OSX
   - secure: r8chZOBPfEkalkpmoGA/jxj2ANlo2LiGkEDMQNzzrUkH+wteGnez+vpVb2U+VsGhy3UEtfgk06U5hsCJrPSJbufTWWtMwYE2KsvkHzCyTh2p0HbLA9Wn8t7QsPZgJItXUr0fpX0M4Qe23rpmL7lthgHzN6HZ+avRyD9nGxMDM2Rf4kQ7SzlOgtFVesw6lbRvMBWvohrmOl8nZBujRWdk97oHQOdeVXL67i45Cx1/lL7HuXSrXcjlXWNt7/Entg7y6gCqk+6oftTfNWsCCGub1Y/fXOzoJ+69L6/iRT19cqcyJJ/r9PBQheAipTelqwB8SmnOwCqt12VOKcjJaOi8zEUncJPUDncT5evdpvJXHI6jr6Cp1TMGfgkHbjKr66HN1gaJ0GO4MmWoinrUeVNoynUFNYYaEDgbUZ4E9LA7BFOQ9ZcCkEieOXV3fM5vZ2C/0FLfjETIQQU8v3ByKqdWuuJozZG7e3pA/mCI2+c/LqflaYfrosHSssK06KJ+pRG8Dgd7CWSejos4DN1mByT45MuNVhHl/OM31uYLSaX/jfr0CwAqktS1JtnWyGYMitB7BdieZs3Xli75MeSmakB25kp85y6ZH1gmd6UjPjI9QKECEO6Z0vP9UBZIVW3+sxU/i3yguXJlX3/iFsP3wzi2orTYdMqgi/O5VCblpdV4FoY=
 deploy:
   provider: releases
   api_key:
     secure: ejBcKqR2Qa13IXJknoDxJVzfIeXwO5sc+tBd0+9BC+6a+WqoPha6GBHccKTzxf5qbEAa2oqXh/Z6YdDn2tg3Y16yDK72Edc5vqrkr+M3ovpC5uApGhLvLF8rrEc5gOgalD0rqfs15QyvksT2QBsk67mPWusnoIfk8FwoJgifmjS/GIDnyswcl6ZLXSRmYUKVV7PB3qx3kocV+jdZ8Om0rnzDNXLjqklRkYYqtLkJJPRGAlOPX22jmnnSYdg3oedCQEuyuPCbWc41/TaZIY9hmU11nob8KOPuHpWGGdkgjnvIKwdjuai4e8Un+I1hy1tbS+9uBhERozvocxmrssIUTY0iUEkoMQzfLYoQPdhceRvC243g0TFaeFNC1Rr/JasMiPpQNHz7pQh0TYBD7sBDfheqP7G8CTMz/39dOLYvnPxU30Y9s//Z4Lgp4E/sipGlDNDuLqgurWQJaFE1turw8te0KjNqkVGOoxiNsy1uAnXasp0zufbFNiU05TRzaZRaC95SX+99PUp98PReOiaWXIH1YuJabIQ5ga62Pxb0bxyDnIzylo1CK4S8IkbYFTqBLl1YjZDBe7WuX5PmN5IhoRYMYhIIVc97TaKNW1pIEcXtf/AEYd9g3CE+IFMcdEHHnCkeO+PUj8YeLbrBmKR68JbE1+jo+iB6CUckOVuteV8=
-  file: "$FRAMEWORK_NAME.framework.zip"
+  file:
+  - "$FRAMEWORK_IOS_NAME.framework.zip"
+  - "$FRAMEWORK_OSX_NAME.framework.zip"
   skip_cleanup: true
   on:
     repo: Adorkable/SegueingInfo

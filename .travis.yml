@@ -35,7 +35,7 @@ deploy:
   api_key:
     secure: ejBcKqR2Qa13IXJknoDxJVzfIeXwO5sc+tBd0+9BC+6a+WqoPha6GBHccKTzxf5qbEAa2oqXh/Z6YdDn2tg3Y16yDK72Edc5vqrkr+M3ovpC5uApGhLvLF8rrEc5gOgalD0rqfs15QyvksT2QBsk67mPWusnoIfk8FwoJgifmjS/GIDnyswcl6ZLXSRmYUKVV7PB3qx3kocV+jdZ8Om0rnzDNXLjqklRkYYqtLkJJPRGAlOPX22jmnnSYdg3oedCQEuyuPCbWc41/TaZIY9hmU11nob8KOPuHpWGGdkgjnvIKwdjuai4e8Un+I1hy1tbS+9uBhERozvocxmrssIUTY0iUEkoMQzfLYoQPdhceRvC243g0TFaeFNC1Rr/JasMiPpQNHz7pQh0TYBD7sBDfheqP7G8CTMz/39dOLYvnPxU30Y9s//Z4Lgp4E/sipGlDNDuLqgurWQJaFE1turw8te0KjNqkVGOoxiNsy1uAnXasp0zufbFNiU05TRzaZRaC95SX+99PUp98PReOiaWXIH1YuJabIQ5ga62Pxb0bxyDnIzylo1CK4S8IkbYFTqBLl1YjZDBe7WuX5PmN5IhoRYMYhIIVc97TaKNW1pIEcXtf/AEYd9g3CE+IFMcdEHHnCkeO+PUj8YeLbrBmKR68JbE1+jo+iB6CUckOVuteV8=
   file: "$FRAMEWORK_NAME.framework.zip"
-skip_cleanup: true
+  skip_cleanup: true
   on:
     repo: Adorkable/SegueingInfo
     tags: true

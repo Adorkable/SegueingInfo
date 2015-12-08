@@ -1,6 +1,7 @@
 SegueingInfo
 ============
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Pod Version](http://img.shields.io/cocoapods/v/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
 [![Pod License](http://img.shields.io/cocoapods/l/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
@@ -13,7 +14,13 @@ SegueingInfo
 
 Installation
 ---
-**SegueingInfo** is available through **[cocoapods](http://cocoapods.org)**, to install simple add the following line to your `PodFile`:
+**SegueingInfo** is available through **[Carthage](https://github.com/Carthage/Carthage)**, to install simply add the following to your `Cartfile`:
+```Ruby
+github "Adorkable/SegueingInfo"
+```
+
+ 
+**SegueingInfo** is also available through **[Cocoapods](http://cocoapods.org)**, to install simply add the following line to your `PodFile`:
 ```Ruby
   pod "SegueingInfo"
 ```

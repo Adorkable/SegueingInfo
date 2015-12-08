@@ -121,7 +121,7 @@
 		3C4C329D1C0D573800FF039E /* SegueingInfoiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegueingInfoiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4C32A21C0D573800FF039E /* SegueingInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueingInfoTests.swift; sourceTree = "<group>"; };
 		3C4C32A41C0D573800FF039E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C4C32AB1C0D57B800FF039E /* SegueingInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SegueingInfo.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C4C32AB1C0D57B800FF039E /* SegueingInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SegueingInfo.swift; sourceTree = "<group>"; };
 		3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = SegueingInfo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		3C7A0C3919A15C590001BE79 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		3C7A0C3B19A163F50001BE79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; lineEnding = 0; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };

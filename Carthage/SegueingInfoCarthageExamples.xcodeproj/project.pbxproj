@@ -72,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3CA06E9B1C35A4E00003AA87 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		3CE1A3071C12AC8C005B8601 /* SegueingInfoCarthageiOSExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueingInfoCarthageiOSExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE1A31A1C12AD74005B8601 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3CE1A31C1C12ADE8005B8601 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,11 +125,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CA06E9D1C35A4E40003AA87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CA06E9B1C35A4E00003AA87 /* Cartfile */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3CE1A2EE1C12AC11005B8601 = {
 			isa = PBXGroup;
 			children = (
 				3CE1A3081C12AC8C005B8601 /* Examples */,
 				3CE1A3671C12AFE6005B8601 /* Tests */,
+				3CA06E9D1C35A4E40003AA87 /* Supporting Files */,
 				3CE1A2F91C12AC11005B8601 /* Products */,
 				3FFB2DADEBBE9F4D3731692F /* Frameworks */,
 			);

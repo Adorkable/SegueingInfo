@@ -7,28 +7,40 @@ before_install:
 - SIMULATOR_ID=$(xcrun instruments -s | grep -o "iPhone 6 (9.1) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
 
 script:
-- open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
-- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator clean build
-#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
-- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator clean build
-#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
-- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoOSX' -sdk macosx clean build
+## make sure the simulator is loaded in time
+#- open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
 
+# iOS Framework
+- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator clean build
+# iOS Unit Tests
+#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoiOS' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
+# iOS Examples
+- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator clean build
+# iOS UI Tests
+#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoExamples' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' test
+# OSX Framework
+- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoOSX' -sdk macosx clean build
+# OSX Unit Tests
+#- xcodebuild -project SegueingInfo.xcodeproj -scheme 'SegueingInfoOSX' -sdk macosx test
+
+# Cocoapods
 - cd Cocoapods
 - pod update
 - xcodebuild -workspace SegueingInfoCocoapodsExamples.xcworkspace -scheme 'SegueingInfoCocoapodsExamples' -sdk iphonesimulator clean build
 - cd ..
 
+# Carthage iOS
 - cd Carthage
 - carthage bootstrap --platform iOS --verbose
 #- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
 - carthage build --no-skip-current --platform iOS
-- carthage archive $FRAMEWORK_IOS_NAME
+- carthage archive SegueingInfoiOS
 - cd ..
 
+# Carthage OSX
 - cd Carthage
 - carthage bootstrap --platform Mac --verbose
 #- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
 - carthage build --no-skip-current --platform Mac
-- carthage archive $FRAMEWORK_OSX_NAME
+- carthage archive SegueingInfoOSX
 - cd ..

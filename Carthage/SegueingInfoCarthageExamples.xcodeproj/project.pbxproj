@@ -31,7 +31,6 @@
 		3CE1A37A1C12B121005B8601 /* SegueingInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1A3721C12B119005B8601 /* SegueingInfoTests.swift */; };
 		3CE1A37B1C12B121005B8601 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1A3731C12B119005B8601 /* Utility.swift */; };
 		3CE1A37F1C132EB1005B8601 /* SegueingInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */; };
-		3CE1A3811C132F6B005B8601 /* SegueingInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */; };
 		3CE1A3821C132F6B005B8601 /* SegueingInfo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1A37E1C132EB1005B8601 /* SegueingInfo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CE1A3861C1330C1005B8601 /* SegueingInfo.framework.dSYM in Copy Framework dSYMs */ = {isa = PBXBuildFile; fileRef = 3CE1A3851C1330C1005B8601 /* SegueingInfo.framework.dSYM */; };
 /* End PBXBuildFile section */
@@ -73,6 +72,10 @@
 
 /* Begin PBXFileReference section */
 		3CA06E9B1C35A4E00003AA87 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		3CA06EA41C35B0E60003AA87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CA06EA61C35B0E60003AA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CA06EA91C35B0E60003AA87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3CA06EAB1C35B0E60003AA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE1A3071C12AC8C005B8601 /* SegueingInfoCarthageiOSExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueingInfoCarthageiOSExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE1A31A1C12AD74005B8601 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3CE1A31C1C12ADE8005B8601 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE1A37F1C132EB1005B8601 /* SegueingInfo.framework in Frameworks */,
-				3CE1A3811C132F6B005B8601 /* SegueingInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +135,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3CA06EA31C35B0E60003AA87 /* SegueingInfoCarthageExamplesOSX */ = {
+			isa = PBXGroup;
+			children = (
+				3CA06EA41C35B0E60003AA87 /* AppDelegate.swift */,
+				3CA06EA61C35B0E60003AA87 /* Assets.xcassets */,
+				3CA06EA81C35B0E60003AA87 /* MainMenu.xib */,
+				3CA06EAB1C35B0E60003AA87 /* Info.plist */,
+			);
+			path = SegueingInfoCarthageExamplesOSX;
+			sourceTree = "<group>";
+		};
 		3CE1A2EE1C12AC11005B8601 = {
 			isa = PBXGroup;
 			children = (
 				3CE1A3081C12AC8C005B8601 /* Examples */,
 				3CE1A3671C12AFE6005B8601 /* Tests */,
 				3CA06E9D1C35A4E40003AA87 /* Supporting Files */,
+				3CA06EA31C35B0E60003AA87 /* SegueingInfoCarthageExamplesOSX */,
 				3CE1A2F91C12AC11005B8601 /* Products */,
 				3FFB2DADEBBE9F4D3731692F /* Frameworks */,
 			);
@@ -274,7 +288,7 @@
 		3CE1A2EF1C12AC11005B8601 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Adorkable;
 				TargetAttributes = {
@@ -372,6 +386,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3CA06EA81C35B0E60003AA87 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CA06EA91C35B0E60003AA87 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		3CE1A31F1C12ADE8005B8601 /* DestinationIsNav.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

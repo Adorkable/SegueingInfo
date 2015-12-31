@@ -34,7 +34,7 @@ script:
 - carthage bootstrap --platform iOS --verbose
 #- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
 - carthage build --no-skip-current --platform iOS
-- carthage archive SegueingInfoiOS
+- carthage archive SegueingInfo --platform iOS --output SegueingInfo.framework.iOS.zip
 - cd ..
 
 # Carthage OSX
@@ -42,5 +42,5 @@ script:
 - carthage bootstrap --platform Mac --verbose
 #- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
 - carthage build --no-skip-current --platform Mac
-- carthage archive SegueingInfoOSX
+- carthage archive SegueingInfo --platform OSX --output SegueingInfo.framework.OSX.zip
 - cd ..

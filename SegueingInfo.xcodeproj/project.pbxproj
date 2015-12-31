@@ -125,6 +125,7 @@
 		3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = SegueingInfo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		3C7A0C3919A15C590001BE79 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		3C7A0C3B19A163F50001BE79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; lineEnding = 0; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
+		3CB2C7891C2B350100BBC529 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +177,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C06B1361C10A2EE00505F68 /* SegueingInfoExamples */ = {
+		3C06B1361C10A2EE00505F68 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
 				3C06B1371C10A2EE00505F68 /* AppDelegate.swift */,
@@ -200,12 +201,13 @@
 				3C06B1401C10A2EE00505F68 /* LaunchScreen.storyboard */,
 				3C06B1431C10A2EE00505F68 /* Info.plist */,
 			);
-			path = SegueingInfoExamples;
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		3C245C911B208010006E673B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3CB2C7891C2B350100BBC529 /* Package.swift */,
 				3C7A0C3B19A163F50001BE79 /* README.md */,
 				3C7A0C3919A15C590001BE79 /* LICENSE.md */,
 				3C7A0C3819A15C2C0001BE79 /* SegueingInfo.podspec */,
@@ -216,7 +218,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3C4C32951C0D573800FF039E /* SegueingInfo */ = {
+		3C4C32951C0D573800FF039E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				3C4C32961C0D573800FF039E /* SegueingInfo.h */,
@@ -224,10 +226,10 @@
 				3C4C32AB1C0D57B800FF039E /* SegueingInfo.swift */,
 				3C06B1491C10A95300505F68 /* UINavigationController+SegueingInfo.swift */,
 			);
-			path = SegueingInfo;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		3C4C32A11C0D573800FF039E /* SegueingInfoTests */ = {
+		3C4C32A11C0D573800FF039E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3C4C32A21C0D573800FF039E /* SegueingInfoTests.swift */,
@@ -235,15 +237,15 @@
 				3C06B15D1C10B55500505F68 /* Utility.swift */,
 				3C4C32A41C0D573800FF039E /* Info.plist */,
 			);
-			path = SegueingInfoTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		3C7A0BED19A14BE70001BE79 = {
 			isa = PBXGroup;
 			children = (
-				3C4C32951C0D573800FF039E /* SegueingInfo */,
-				3C4C32A11C0D573800FF039E /* SegueingInfoTests */,
-				3C06B1361C10A2EE00505F68 /* SegueingInfoExamples */,
+				3C4C32951C0D573800FF039E /* Sources */,
+				3C4C32A11C0D573800FF039E /* Tests */,
+				3C06B1361C10A2EE00505F68 /* Examples */,
 				3C7A0BF719A14BE70001BE79 /* Products */,
 				3C245C911B208010006E673B /* Supporting Files */,
 			);
@@ -666,7 +668,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SegueingInfo/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -695,7 +697,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SegueingInfo/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -716,7 +718,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoOSXTests;
@@ -735,7 +737,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoOSXTests;
@@ -753,7 +755,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoExamples/Info.plist;
+				INFOPLIST_FILE = Examples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSExamples;
@@ -773,7 +775,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoExamples/Info.plist;
+				INFOPLIST_FILE = Examples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSExamples;
@@ -789,7 +791,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSUITests;
@@ -808,7 +810,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSUITests;
@@ -831,7 +833,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfo/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -858,7 +860,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfo/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -879,7 +881,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueingInfo.SegueingInfoiOSTests;
@@ -896,7 +898,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueingInfo.SegueingInfoiOSTests;

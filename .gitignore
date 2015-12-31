@@ -1,5 +1,6 @@
 .DS_Store
 
+# rbenv
 .ruby-version
 
 # Xcode
@@ -32,3 +33,9 @@ Carthage/Build
 
 # Appledocs
 docs
+
+# swiftenv
+.swift-version
+
+# Swift Package Manager
+.build

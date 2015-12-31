@@ -56,8 +56,6 @@ PostCommit:
     enabled: true
   SubmoduleStatus:
     enabled: true
-  GitGuilt:
-    enabled: true
 
 PostMerge:
   ALL: 

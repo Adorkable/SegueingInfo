@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/Adorkable/SegueingInfo/tree/HEAD)
+
+[Full Changelog](https://github.com/Adorkable/SegueingInfo/compare/2.1.0...HEAD)
+
+**Implemented enhancements:**
+
+- Swift Package Manager support [\#6](https://github.com/Adorkable/SegueingInfo/issues/6)
+
 ## [2.1.0](https://github.com/Adorkable/SegueingInfo/tree/2.1.0) (2015-12-05)
 [Full Changelog](https://github.com/Adorkable/SegueingInfo/compare/2.0.0...2.1.0)
 

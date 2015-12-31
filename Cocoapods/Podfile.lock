@@ -11,6 +11,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SegueingInfo: 92d247339aabee0b8d38c782060ab0522b316e6d
+  SegueingInfo: cbaf3eb1882836fe447e517b23ec77a987c77d07
 
 COCOAPODS: 0.39.0

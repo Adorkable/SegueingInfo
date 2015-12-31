@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		0C4F3F17ACA3E043C9776C47 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE1A3071C12AC8C005B8601 /* SegueingInfoCocoapodsExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueingInfoCocoapodsExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CE1A31A1C12AD74005B8601 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SegueingInfoExamples/Info.plist; sourceTree = "<group>"; };
+		3CE1A31A1C12AD74005B8601 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE1A31C1C12ADE8005B8601 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE1A31D1C12ADE8005B8601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE1A3201C12ADE8005B8601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DestinationIsNav.storyboard; sourceTree = "<group>"; };
@@ -67,10 +67,10 @@
 		3CE1A3371C12ADE8005B8601 /* SecondNavContainedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondNavContainedViewController.swift; sourceTree = "<group>"; };
 		3CE1A3381C12ADE8005B8601 /* StaticCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCallViewController.swift; sourceTree = "<group>"; };
 		3CE1A3661C12AFE6005B8601 /* SegueingInfoCocoapodsExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegueingInfoCocoapodsExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CE1A3701C12B119005B8601 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../SegueingInfoTests/Info.plist; sourceTree = "<group>"; };
-		3CE1A3711C12B119005B8601 /* SegueingInfoiOSUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueingInfoiOSUITests.swift; path = ../SegueingInfoTests/SegueingInfoiOSUITests.swift; sourceTree = "<group>"; };
-		3CE1A3721C12B119005B8601 /* SegueingInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueingInfoTests.swift; path = ../SegueingInfoTests/SegueingInfoTests.swift; sourceTree = "<group>"; };
-		3CE1A3731C12B119005B8601 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = ../SegueingInfoTests/Utility.swift; sourceTree = "<group>"; };
+		3CE1A3701C12B119005B8601 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE1A3711C12B119005B8601 /* SegueingInfoiOSUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueingInfoiOSUITests.swift; sourceTree = "<group>"; };
+		3CE1A3721C12B119005B8601 /* SegueingInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueingInfoTests.swift; sourceTree = "<group>"; };
+		3CE1A3731C12B119005B8601 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B7A1DCAE1CEE769F1628B910 /* Pods_SegueingInfoCocoapodsExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueingInfoCocoapodsExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D5C80B3CB9511DD2F1CF8D /* Pods-SegueingInfoCocoapodsExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueingInfoCocoapodsExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueingInfoCocoapodsExamples/Pods-SegueingInfoCocoapodsExamples.release.xcconfig"; sourceTree = "<group>"; };
 		EB83A4336781BFF3598A6328 /* Pods-SegueingInfoCocoapodsExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueingInfoCocoapodsExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueingInfoCocoapodsExamples/Pods-SegueingInfoCocoapodsExamples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,9 +98,8 @@
 		3CE1A2EE1C12AC11005B8601 = {
 			isa = PBXGroup;
 			children = (
-				3CE1A3081C12AC8C005B8601 /* SegueingInfoExamples */,
-				3CE1A3191C12AD62005B8601 /* Supporting Files */,
-				3CE1A3671C12AFE6005B8601 /* SegueingInfoTests */,
+				3CE1A3081C12AC8C005B8601 /* Examples */,
+				3CE1A3671C12AFE6005B8601 /* Tests */,
 				3CE1A2F91C12AC11005B8601 /* Products */,
 				57C26AEBC1F1705BE1F88C57 /* Pods */,
 				3FFB2DADEBBE9F4D3731692F /* Frameworks */,
@@ -116,7 +115,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3CE1A3081C12AC8C005B8601 /* SegueingInfoExamples */ = {
+		3CE1A3081C12AC8C005B8601 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
 				3CE1A31C1C12ADE8005B8601 /* AppDelegate.swift */,
@@ -130,17 +129,10 @@
 				3CE1A3361C12ADE8005B8601 /* PopTo.storyboard */,
 				3CE1A3371C12ADE8005B8601 /* SecondNavContainedViewController.swift */,
 				3CE1A3381C12ADE8005B8601 /* StaticCallViewController.swift */,
-			);
-			name = SegueingInfoExamples;
-			path = ../SegueingInfoExamples;
-			sourceTree = "<group>";
-		};
-		3CE1A3191C12AD62005B8601 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				3CE1A31A1C12AD74005B8601 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = Examples;
+			path = ../Examples;
 			sourceTree = "<group>";
 		};
 		3CE1A31E1C12ADE8005B8601 /* Base.lproj */ = {
@@ -159,7 +151,7 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
-		3CE1A3671C12AFE6005B8601 /* SegueingInfoTests */ = {
+		3CE1A3671C12AFE6005B8601 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3CE1A3701C12B119005B8601 /* Info.plist */,
@@ -167,8 +159,8 @@
 				3CE1A3721C12B119005B8601 /* SegueingInfoTests.swift */,
 				3CE1A3731C12B119005B8601 /* Utility.swift */,
 			);
-			name = SegueingInfoTests;
-			path = ../SegueingInfoiOSUITests;
+			name = Tests;
+			path = ../Tests;
 			sourceTree = "<group>";
 		};
 		3FFB2DADEBBE9F4D3731692F /* Frameworks */ = {
@@ -552,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/../SegueingInfoExamples/Info.plist";
+				INFOPLIST_FILE = ../Examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoCocoapodsExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,7 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/../SegueingInfoExamples/Info.plist";
+				INFOPLIST_FILE = ../Examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoCocoapodsExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,7 +568,7 @@
 		3CE1A36D1C12AFE6005B8601 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ../SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = ../Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoCocoapodsExamplesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,7 +580,7 @@
 		3CE1A36E1C12AFE6005B8601 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ../SegueingInfoTests/Info.plist;
+				INFOPLIST_FILE = ../Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoCocoapodsExamplesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

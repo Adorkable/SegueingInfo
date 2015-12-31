@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.default_subspec = 'Core'
   s.subspec 'Core' do |core|
-    core.source_files  = "SegueingInfo/**/*.swift"
+    core.source_files  = "Sources/**/*.swift"
   end
 
 end

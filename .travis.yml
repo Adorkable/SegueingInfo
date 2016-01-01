@@ -31,7 +31,7 @@ script:
 
 # Carthage iOS
 - cd Carthage
-- carthage bootstrap --platform iOS --verbose --no-use-binaries --simulator-only
+#- carthage bootstrap --platform iOS --verbose --no-use-binaries --simulator-only
 #- xcodebuild -project SegueingInfoCarthageExamples.xcodeproj/ -scheme "SegueingInfoCarthageExamples" -sdk iphonesimulator clean build
 #- carthage build --no-skip-current --platform iOS
 #- carthage archive SegueingInfo --platform iOS --output SegueingInfo.framework.iOS.zip

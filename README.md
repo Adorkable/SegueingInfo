@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/adorkable/segueinginfo.png?label=ready&title=Ready)](https://waffle.io/adorkable/segueinginfo)
 SegueingInfo
 ============
 
@@ -107,3 +106,5 @@ Finally you have two options:
 Contributing
 ---
 If you have any ideas, suggestions or bugs to report please [create an issue](https://github.com/Adorkable/SegueingInfo/issues/new) labeled *feature* or *bug* (check to see if the issue exists first please!). Or suggest a pull request!
+
+[![waffle.io](https://badge.waffle.io/adorkable/segueinginfo.png?label=ready&title=waffle.io)](https://waffle.io/adorkable/segueinginfo)

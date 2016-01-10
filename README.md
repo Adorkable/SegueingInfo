@@ -1,7 +1,6 @@
 SegueingInfo
 ============
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](http://img.shields.io/travis/Adorkable/SegueingInfo.svg?branch=master&style=flat)](https://travis-ci.org/Adorkable/SegueingInfo)
 [![Pod Platform](http://img.shields.io/cocoapods/p/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
 [![Pod License](http://img.shields.io/cocoapods/l/SegueingInfo.svg?style=flat)](http://cocoadocs.org/docsets/SegueingInfo/)
@@ -107,3 +106,5 @@ Finally you have two options:
 Contributing
 ---
 If you have any ideas, suggestions or bugs to report please [create an issue](https://github.com/Adorkable/SegueingInfo/issues/new) labeled *feature* or *bug* (check to see if the issue exists first please!). Or suggest a pull request!
+
+[![waffle.io](https://badge.waffle.io/adorkable/segueinginfo.png?label=ready&title=waffle.io)](https://waffle.io/adorkable/segueinginfo)

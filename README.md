@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/adorkable/segueinginfo.png?label=ready&title=Ready)](https://waffle.io/adorkable/segueinginfo)
 SegueingInfo
 ============
 

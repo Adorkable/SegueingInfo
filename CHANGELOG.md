@@ -9,6 +9,10 @@
 - Swift Package Manager support [\#6](https://github.com/Adorkable/SegueingInfo/issues/6)
 - Examples covering all UINavigationController extention selectors [\#2](https://github.com/Adorkable/SegueingInfo/issues/2)
 
+**Merged pull requests:**
+
+- waffle.io Badge [\#9](https://github.com/Adorkable/SegueingInfo/pull/9) ([waffle-iron](https://github.com/waffle-iron))
+
 ## [2.1.0](https://github.com/Adorkable/SegueingInfo/tree/2.1.0) (2015-12-05)
 [Full Changelog](https://github.com/Adorkable/SegueingInfo/compare/2.0.0...2.1.0)
 

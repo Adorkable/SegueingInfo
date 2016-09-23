@@ -8,12 +8,6 @@
 
 import Foundation
 
-// TODO: Unit Test for Utility.swift
-public func random_UInt32() -> UInt32
-{
-    return arc4random()
-}
-
 extension String {
     
     subscript (index : Int) -> Character {
@@ -27,8 +21,8 @@ extension String {
         
         for _ in 1...length
         {
-            let randomCharacterIndex = Int(random_UInt32()) % allowedCharacters.characters.count
-            let randomCharacter : Character = allowedCharacters[randomCharacterIndex]
+            let randomCharacterIndex = arc4random_uniform(UInt32(allowedCharacters.characters.count))
+            let randomCharacter : Character = allowedCharacters[Int(randomCharacterIndex)]
             result.append(randomCharacter)
         }
         

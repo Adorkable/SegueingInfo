@@ -34,7 +34,7 @@ class FirstNavContainedViewController: SegueingInfoViewController {
         return text
     }
     
-    private var received : SegueingInfoInfoClass?
+    fileprivate var received : SegueingInfoInfoClass?
     @IBOutlet weak var receivedView : UIView?
     func ensureReceivedView() -> UIView {
         
@@ -90,36 +90,36 @@ class FirstNavContainedViewController: SegueingInfoViewController {
         if let received = self.received {
             self.received = nil
             
-            receivedView.hidden = false
+            receivedView.isHidden = false
             
             let receivedLabel = self.ensureReceivedLabel()
             receivedLabel.text = "\(received)"
             passField.text = "\(received)"
         } else {
             
-            receivedView.hidden = true
+            receivedView.isHidden = true
         }
     }
 }
 
 extension FirstNavContainedViewController {
 
-    @IBAction func pass(sender : AnyObject?) {
+    @IBAction func pass(_ sender : AnyObject?) {
         
         // TODO: tell user they need to set the value
-        self.performSegueWithIdentifier("pass", sender: "\(self.ensurePassFieldText()) \(self.guaranteeAdd())")
+        self.performSegue(withIdentifier: "pass", sender: "\(self.ensurePassFieldText()) \(self.guaranteeAdd())")
     }
 }
 
 extension FirstNavContainedViewController : SegueingInfoDestination {
     
-    func destinationPrepareForSegue(segue: SegueingInfoStoryboardSegueClass?, withInfo info: SegueingInfoInfoClass) {
+    func destinationPrepareForSegue(_ segue: SegueingInfoStoryboardSegueClass?, withInfo info: SegueingInfoInfoClass) {
         
         if let receivedView = self.receivedView,
             let receivedLabel = self.receivedLabel,
             let passField = self.passField {
                 
-                receivedView.hidden = false
+                receivedView.isHidden = false
                 receivedLabel.text = "\(info)"
                 passField.text = "\(info)"
         } else {

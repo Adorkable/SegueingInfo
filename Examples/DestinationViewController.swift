@@ -12,7 +12,7 @@ import SegueingInfo
 
 class DestinationViewController: SegueingInfoViewControllerClass {
     
-    private var received : SegueingInfoInfoClass?
+    fileprivate var received : SegueingInfoInfoClass?
     @IBOutlet weak var receivedLabel : UILabel?
     func ensureReceivedLabel() -> UILabel {
         
@@ -42,7 +42,7 @@ class DestinationViewController: SegueingInfoViewControllerClass {
 
 extension DestinationViewController : SegueingInfoDestination {
 
-    func destinationPrepareForSegue(segue: SegueingInfoStoryboardSegueClass?, withInfo info: SegueingInfoInfoClass) {
+    func destinationPrepareForSegue(_ segue: SegueingInfoStoryboardSegueClass?, withInfo info: SegueingInfoInfoClass) {
      
         // We cannot guarantee whether this will be called before, during or after viewDidLoad
         if let receivedLabel = self.receivedLabel {

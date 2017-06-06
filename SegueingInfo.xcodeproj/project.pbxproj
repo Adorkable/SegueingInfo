@@ -412,16 +412,16 @@
 					};
 					3C06B1341C10A2EE00505F68 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					3C06B1501C10B3DE00505F68 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						TestTargetID = 3C06B1341C10A2EE00505F68;
 					};
 					3C4C32931C0D573800FF039E = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					3C4C329C1C0D573800FF039E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -764,7 +764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -784,7 +784,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -802,7 +802,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SegueingInfoiOSExamples;
 				USES_XCTRUNNER = YES;
 			};
@@ -821,7 +821,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.segueinginfo.SegueingInfoiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SegueingInfoiOSExamples;
 				USES_XCTRUNNER = YES;
 			};
@@ -848,7 +848,7 @@
 				PRODUCT_NAME = SegueingInfo;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -875,7 +875,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.adorkable.Segueinginfo;
 				PRODUCT_NAME = SegueingInfo;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

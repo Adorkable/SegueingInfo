@@ -23,11 +23,11 @@ class InstanceCallViewController: PassBaseViewController {
 
 extension InstanceCallViewController {
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         
         if let info = sender {
-            self.prepareDestinationViewControllerForSegue(segue, withInfo: info)
+            self.prepareDestinationViewControllerForSegue(segue, withInfo: info as SegueingInfoInfoClass)
         }
     }
 }

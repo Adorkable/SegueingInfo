@@ -12,7 +12,7 @@ import SegueingInfo
 
 class SecondNavContainedViewController: SegueingInfoViewController {
 
-    private var received : SegueingInfoInfoClass?
+    fileprivate var received : SegueingInfoInfoClass?
     @IBOutlet weak var receivedLabel : UILabel?
     func ensureReceivedLabel() -> UILabel {
         
@@ -63,35 +63,35 @@ class SecondNavContainedViewController: SegueingInfoViewController {
 
 extension SecondNavContainedViewController {
     
-    @IBAction func pass(sender : AnyObject?) {
+    @IBAction func pass(_ sender : AnyObject?) {
         
         // TODO: tell user they need to set the value
-        self.performSegueWithIdentifier("pass", sender: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())")
+        self.performSegue(withIdentifier: "pass", sender: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())")
     }
     
-    @IBAction func popViewController(sender : AnyObject?) {
+    @IBAction func popViewController(_ sender : AnyObject?) {
         
-        self.navigationController?.popViewControllerAnimated(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())")
+        self.navigationController?.popViewControllerAnimated(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
     }
     
-    @IBAction func popToViewController(sender : AnyObject?) {
+    @IBAction func popToViewController(_ sender : AnyObject?) {
         
         guard let popDestination = self.navigationController?.viewControllers.first else {
             assertionFailure("No first View Controller in Navigation Controller")
             return
         }
-        self.navigationController?.popToViewController(popDestination, animated: true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())")
+        self.navigationController?.popToViewController(popDestination, animated: true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
     }
     
-    @IBAction func popToRootViewController(sender : AnyObject?) {
+    @IBAction func popToRootViewController(_ sender : AnyObject?) {
         
-        self.navigationController?.popToRootViewController(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())")
+        self.navigationController?.popToRootViewController(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
     }
 }
 
 extension SecondNavContainedViewController : SegueingInfoDestination {
     
-    func destinationPrepareForSegue(segue: SegueingInfoStoryboardSegueClass?, withInfo info: SegueingInfoInfoClass) {
+    func destinationPrepareForSegue(_ segue: SegueingInfoStoryboardSegueClass?, withInfo info: SegueingInfoInfoClass) {
         
         if let receivedLabel = self.receivedLabel {
                 

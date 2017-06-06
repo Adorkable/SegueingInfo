@@ -30,12 +30,12 @@ public extension SegueingInfoViewControllerClass {
     *  @param segue The segue being performed
     *  @param withInfo  The information being passed to the destination of the segue
     */
-    public class func prepareDestinationViewControllerForSegue(segue : SegueingInfoStoryboardSegueClass, withInfo info : SegueingInfoInfoClass) {
+    public class func prepareDestinationViewControllerForSegue(_ segue : SegueingInfoStoryboardSegueClass, withInfo info : SegueingInfoInfoClass) {
         
         #if os(OSX)
             segue.destinationController.treatAsDestinationViewController(segue, withInfo: info)
         #elseif os(iOS)
-            segue.destinationViewController.treatAsDestinationViewController(segue, withInfo: info)
+            segue.destination.treatAsDestinationViewController(segue, withInfo: info)
         #endif
     }
     
@@ -45,8 +45,8 @@ public extension SegueingInfoViewControllerClass {
      *  @param segue The segue being performed
      *  @param withInfo  The information being passed to the destination of the segue
      */
-    public func prepareDestinationViewControllerForSegue(segue : SegueingInfoStoryboardSegueClass, withInfo info : SegueingInfoInfoClass) {
-        self.dynamicType.prepareDestinationViewControllerForSegue(segue, withInfo: info)
+    public func prepareDestinationViewControllerForSegue(_ segue : SegueingInfoStoryboardSegueClass, withInfo info : SegueingInfoInfoClass) {
+        type(of: self).prepareDestinationViewControllerForSegue(segue, withInfo: info)
     }
 }
 
@@ -57,7 +57,7 @@ public extension SegueingInfoViewControllerClass {
      *  @param segue Segue
      *  @param withInfo  Info to pass
      */
-    internal func treatAsDestinationViewController(segue : SegueingInfoStoryboardSegueClass?, withInfo info : SegueingInfoInfoClass) {
+    internal func treatAsDestinationViewController(_ segue : SegueingInfoStoryboardSegueClass?, withInfo info : SegueingInfoInfoClass) {
 
         // Note: We aren't extending UINavigationController or UITabBarController, this way functionality is more explicitly controlled by clients of the library
         // By default we'll seek through a NavigationControllerClass to it's root or UITabBarController to it's first VC
@@ -99,19 +99,19 @@ public protocol SegueingInfoDestination : NSObjectProtocol {
      *  @param segue The segue being performed
      *  @param withInfo  The information being passed from the source of the segue
      */
-    func destinationPrepareForSegue(segue : SegueingInfoStoryboardSegueClass?, withInfo info : SegueingInfoInfoClass)
+    func destinationPrepareForSegue(_ segue : SegueingInfoStoryboardSegueClass?, withInfo info : SegueingInfoInfoClass)
 }
 
 /// Backwards compatability with < 2.0.0 versions of Framework
 public typealias SegueingInfoProtocol = SegueingInfoDestination
 
-public class SegueingInfoViewController : SegueingInfoViewControllerClass {
+open class SegueingInfoViewController : SegueingInfoViewControllerClass {
     
-    override public func prepareForSegue(segue: SegueingInfoStoryboardSegueClass, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
+    override open func prepare(for segue: SegueingInfoStoryboardSegueClass, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         
         if let info = sender {
-            self.prepareDestinationViewControllerForSegue(segue, withInfo: info)
+            self.prepareDestinationViewControllerForSegue(segue, withInfo: info as SegueingInfoInfoClass)
         }
     }
 }

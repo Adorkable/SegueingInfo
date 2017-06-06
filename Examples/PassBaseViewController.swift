@@ -40,8 +40,8 @@ class PassBaseViewController : SegueingInfoViewControllerClass {
 
 extension PassBaseViewController {
     
-    @IBAction func pass(sender : AnyObject?) {
+    @IBAction func pass(_ sender : AnyObject?) {
         
-        self.performSegueWithIdentifier("pass", sender: self.ensurePassField().text)
+        self.performSegue(withIdentifier: "pass", sender: self.ensurePassField().text)
     }
 }

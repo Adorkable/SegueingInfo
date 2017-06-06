@@ -22,13 +22,13 @@ public extension UINavigationController
      *
      *  @return The popped View Controller
      */
-    public func popViewControllerAnimated(animated : Bool, withInfo info : SegueingInfoInfoClass) -> SegueingInfoViewControllerClass? {
+    public func popViewControllerAnimated(_ animated : Bool, withInfo info : SegueingInfoInfoClass) -> SegueingInfoViewControllerClass? {
         if self.viewControllers.count > 1 {
             let topViewController = self.viewControllers[self.viewControllers.count - 2]
             topViewController.treatAsDestinationViewController(nil, withInfo: info)
         }
         
-        return self.popViewControllerAnimated(animated)
+        return self.popViewController(animated: animated)
     }
     
     /**
@@ -40,7 +40,7 @@ public extension UINavigationController
      *
      *  @return The popped controllers
      */
-    public func popToViewController(viewController : SegueingInfoViewControllerClass, animated : Bool, withInfo info : SegueingInfoInfoClass) -> [SegueingInfoViewControllerClass]? {
+    public func popToViewController(_ viewController : SegueingInfoViewControllerClass, animated : Bool, withInfo info : SegueingInfoInfoClass) -> [SegueingInfoViewControllerClass]? {
         
         viewController.treatAsDestinationViewController(nil, withInfo: info)
         return self.popToViewController(viewController, animated: animated)
@@ -54,7 +54,7 @@ public extension UINavigationController
      *
      *  @return The popped controllers
      */
-    public func popToRootViewController(animated : Bool, withInfo info : SegueingInfoInfoClass) -> [SegueingInfoViewControllerClass]? {
+    public func popToRootViewController(_ animated : Bool, withInfo info : SegueingInfoInfoClass) -> [SegueingInfoViewControllerClass]? {
         
         if self.viewControllers.count > 0,
             let rootViewController = self.viewControllers.first {
@@ -62,7 +62,7 @@ public extension UINavigationController
                 rootViewController.treatAsDestinationViewController(nil, withInfo: info)
         }
         
-        return popToRootViewControllerAnimated(animated)
+        return self.popToRootViewController(animated: animated)
     }
 }
 #endif

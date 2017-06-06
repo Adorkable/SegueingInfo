@@ -11,12 +11,12 @@ import Foundation
 extension String {
     
     subscript (index : Int) -> Character {
-        return self[ self.startIndex.advancedBy(index) ]
+        return self[ self.characters.index(self.startIndex, offsetBy: index) ]
     }
     
     // TODO: random string without repeat
     // TODO: NSCharacterSet
-    public static func randomString(length : Int, allowedCharacters : String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890") -> String {
+    public static func randomString(_ length : Int, allowedCharacters : String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890") -> String {
         var result = String()
         
         for _ in 1...length

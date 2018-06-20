@@ -32,11 +32,13 @@ public extension SegueingInfoViewControllerClass {
     */
     public class func prepareDestinationViewControllerForSegue(_ segue : SegueingInfoStoryboardSegueClass, withInfo info : SegueingInfoInfoClass) {
         
-        #if os(OSX)
-            segue.destinationController.treatAsDestinationViewController(segue, withInfo: info)
-        #elseif os(iOS)
-            segue.destination.treatAsDestinationViewController(segue, withInfo: info)
-        #endif
+    #if os(OSX)
+        if let destinationController = segue.destinationController as? NSViewController {
+            destinationController.treatAsDestinationViewController(segue, withInfo: info)
+        }
+    #elseif os(iOS)
+        segue.destination.treatAsDestinationViewController(segue, withInfo: info)
+    #endif
     }
     
     /**

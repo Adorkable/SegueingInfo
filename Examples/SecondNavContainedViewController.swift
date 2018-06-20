@@ -71,7 +71,7 @@ extension SecondNavContainedViewController {
     
     @IBAction func popViewController(_ sender : AnyObject?) {
         
-        self.navigationController?.popViewControllerAnimated(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
+        let _ = self.navigationController?.popViewControllerAnimated(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
     }
     
     @IBAction func popToViewController(_ sender : AnyObject?) {
@@ -80,12 +80,11 @@ extension SecondNavContainedViewController {
             assertionFailure("No first View Controller in Navigation Controller")
             return
         }
-        self.navigationController?.popToViewController(popDestination, animated: true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
+        let _ = self.navigationController?.popToViewController(popDestination, animated: true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
     }
     
     @IBAction func popToRootViewController(_ sender : AnyObject?) {
-        
-        self.navigationController?.popToRootViewController(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
+        let _ = self.navigationController?.popToRootViewController(true, withInfo: "\(self.ensureReceivedLabelText()) \(self.guaranteeAdd())" as SegueingInfoInfoClass)
     }
 }
 

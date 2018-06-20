@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript (index : Int) -> Character {
-        return self[ self.characters.index(self.startIndex, offsetBy: index) ]
+        return self[ self.index(self.startIndex, offsetBy: index) ]
     }
     
     // TODO: random string without repeat
@@ -21,7 +21,7 @@ extension String {
         
         for _ in 1...length
         {
-            let randomCharacterIndex = arc4random_uniform(UInt32(allowedCharacters.characters.count))
+            let randomCharacterIndex = arc4random_uniform(UInt32(allowedCharacters.count))
             let randomCharacter : Character = allowedCharacters[Int(randomCharacterIndex)]
             result.append(randomCharacter)
         }

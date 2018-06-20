@@ -34,7 +34,7 @@ class PassBaseViewController : SegueingInfoViewControllerClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.ensurePassField()
+        let _ = self.ensurePassField()
     }
 }
 
